@@ -1,1 +1,24 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: "Andika", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}

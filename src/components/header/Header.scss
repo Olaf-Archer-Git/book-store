@@ -1,0 +1,160 @@
+@import "../../style/variables.scss";
+
+.header {
+  &-top {
+    background: $bg-dark;
+    padding: 5px 0;
+    border-bottom: 2px solid $color-light;
+    text-align: center;
+    color: $color-light;
+  }
+
+  &-middle {
+    background: $bg-dark;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-bottom {
+    background: $bg-grey;
+  }
+}
+
+.top-text {
+  margin-bottom: 0;
+  & a {
+    color: $color-light;
+  }
+
+  & a:hover {
+    color: $btn-hover;
+  }
+}
+
+.middle {
+  &-logo {
+    color: $color-primary;
+    font-weight: bold;
+  }
+
+  &-form {
+    position: relative;
+  }
+
+  &-input {
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px 100px 5px 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+  }
+
+  &-link {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    padding: 3px 30px;
+    background: $btn-color;
+    color: $bg-dark;
+    font-size: 19px;
+    border-radius: 10px;
+  }
+
+  &-link:hover {
+    background: $btn-hover;
+  }
+
+  &-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+
+  &-item {
+    & a {
+      padding-left: 5px;
+      color: $color-light;
+    }
+
+    & a:hover {
+      color: $btn-hover;
+    }
+
+    & svg {
+      color: $color-light;
+      font-size: 23px;
+    }
+  }
+
+  &-cart {
+    padding-right: 10px;
+  }
+
+  &-cart svg:hover {
+    transition: all 0.5s;
+    color: $btn-hover;
+  }
+
+  &-badge {
+    padding: 1px 10px;
+    color: $color-light;
+    background: $btn-color;
+    border-radius: 5px;
+  }
+}
+
+.bottom {
+  &-btn,
+  &-btn:hover,
+  &-btn:focus {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    text-transform: uppercase;
+    padding-top: 10px;
+  }
+
+  &-btn {
+    & svg {
+      padding: 0 10px 3px 0;
+      font-size: 30px;
+    }
+  }
+
+  &-list {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 10px;
+
+    & li {
+      padding: 0 20px 0 0;
+      font-weight: bold;
+      color: $color-light;
+      font-size: 18px;
+    }
+
+    & li:hover {
+      color: $btn-hover;
+    }
+  }
+}
+
+.dropdown-menu {
+  background: $bg-grey;
+  border: none;
+  padding: 5px 25px;
+}
+
+.dropdown-item {
+  color: $color-light;
+}
+
+.dropdown-item:hover {
+  background: $bg-grey;
+  color: $btn-hover;
+}
