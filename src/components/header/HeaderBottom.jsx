@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { CgMenuGridO } from "react-icons/cg";
 import "./Header.scss";
 
@@ -7,7 +8,7 @@ const HeaderBottom = () => {
     <section className="header-bottom">
       <div className="container-xxl">
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-3 bottom-menu">
             <div className="dropdown">
               <button
                 className="btn btn-secondary dropdown-toggle bottom-btn"
@@ -41,12 +42,20 @@ const HeaderBottom = () => {
               </ul>
             </div>
           </div>
-          <div className="col-md-8">
+          <div className="col-md-9">
             <ul className="bottom-list">
-              <li>Home</li>
-              <li>Contact</li>
-              <li>Blog</li>
-              <li>About</li>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact</Link>
+              </li>
+              <li>
+                <Link to="/blog">Blog</Link>
+              </li>
+              <li>
+                <Link to="/">About</Link>
+              </li>
             </ul>
           </div>
         </div>
