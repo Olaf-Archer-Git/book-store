@@ -2,4 +2,47 @@
 
 .home {
   text-align: center;
+  background: $color-light;
+  padding: 30px 0;
+
+  &-banner {
+    position: relative;
+    margin-bottom: 10px;
+
+    & img {
+      width: 100%;
+      min-height: 60vh;
+      border-radius: 10px;
+    }
+  }
+
+  &-content {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+
+    & h2 {
+      color: $color-light;
+      text-transform: uppercase;
+      padding-bottom: 30px;
+    }
+
+    & p {
+      color: $color-primary;
+      text-align: left;
+      padding-bottom: 30px;
+    }
+
+    & a {
+      padding: 5px 30px;
+      background: $btn-color;
+      border-radius: 10px;
+      color: $bg-grey;
+    }
+
+    & a:hover {
+      background: $btn-hover;
+      color: $color-light;
+    }
+  }
 }
