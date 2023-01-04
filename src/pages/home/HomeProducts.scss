@@ -1,0 +1,57 @@
+@import "../../style/variables.scss";
+
+.products {
+  padding: 50px 0;
+  margin: 50px 0;
+  background: $bg-white;
+}
+
+.services {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-wrap {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+  }
+
+  & svg {
+    font-size: 30px;
+    margin-right: 10px;
+    max-width: 100%;
+  }
+
+  &-title {
+    font-weight: bold;
+    margin-bottom: 0;
+    text-transform: capitalize;
+    font-size: 15px;
+  }
+
+  &-subtitle {
+    margin-bottom: 0;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 950px) {
+  .services-wrap {
+    display: block;
+  }
+}
+
+@media (max-width: 750px) {
+  .services {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 750px) {
+  .services {
+    display: flex;
+    flex-direction: column;
+  }
+}
