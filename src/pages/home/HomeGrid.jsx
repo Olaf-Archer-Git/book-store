@@ -31,7 +31,7 @@ const HomeGrid = () => {
                   className="grid-item"
                   key={item.id}
                   style={{
-                    backgroundImage: `linear-gradient(${item.gradient}), url("${item.img}")`,
+                    backgroundImage: `linear-gradient( ${item.gradient}), url("${item.img}")`,
                   }}
                 >
                   <h2 className="grid-title">{item.title}</h2>
