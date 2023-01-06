@@ -10,70 +10,78 @@ import "./BlogStyle.scss";
 const NewsCard = () => {
   return (
     <div className="news">
-
-      <h2 className="news-head">latest news</h2>
       <div className="container-xxl">
+        <h2 className="news-head">latest news</h2>
         <div className="row">
           <div className="col-lg-3">
             <div className="news-item">
               <div className="news-img">
                 <img src={img1} alt="#!" />
               </div>
-              <div className="news-text">
+              <div className="news-content">
                 <p className="news-title">blog one</p>
                 <p className="news-subtitle">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis,
-                  tempore. Rerum, dignissimos? Recusandae nihil libero optio
-                  pariatur blanditiis voluptate explicabo?
+                  dolorem vel temporibus? Molestiae, nobis? Lorem ipsum dolor
+                  sit, amet consectetur adipisicing elit. Ad velit nobis dolorem
+                  vel temporibus? Molestiae, nobis?
                 </p>
+              </div>
+              <div className="news-btn">
+                <a href="#!">read more</a>
               </div>
             </div>
           </div>
-
-          <div className="col-lg-3">
-            <div className="news-item">
-              <div className="news-img">
-                <img src={img2} alt="#!" />
-              </div>
-              <div className="news-text">
-                <p className="news-title">blog two</p>
-                <p className="news-subtitle">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis,
-                  tempore. Rerum, dignissimos? Recusandae nihil libero optio
-                  pariatur blanditiis voluptate explicabo?
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-3">
-            <div className="news-item">
-              <div className="news-img">
-                <img src={img3} alt="#!" />
-              </div>
-              <div className="news-text">
-                <p className="news-title">blog three</p>
-                <p className="news-subtitle">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis,
-                  tempore. Rerum, dignissimos? Recusandae nihil libero optio
-                  pariatur blanditiis voluptate explicabo?
-                </p>
-              </div>
-            </div>
-          </div>
-
           <div className="col-lg-3">
             <div className="news-item">
               <div className="news-img">
                 <img src={img4} alt="#!" />
               </div>
-              <div className="news-text">
-                <p className="news-title">blog four</p>
+              <div className="news-content">
+                <p className="news-title">blog one</p>
                 <p className="news-subtitle">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis,
-                  tempore. Rerum, dignissimos? Recusandae nihil libero optio
-                  pariatur blanditiis voluptate explicabo?
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad
+                  voluptatem, possimus atque earum ea laborum delectus fuga quae
+                  velit nobis dolorem vel temporibus? Molestiae, nobis?
                 </p>
+              </div>
+              <div className="news-btn">
+                <a href="#!">read more</a>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-3">
+            <div className="news-item">
+              <div className="news-img">
+                <img src={img2} alt="#!" />
+              </div>
+              <div className="news-content">
+                <p className="news-title">blog one</p>
+                <p className="news-subtitle">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad
+                  voluptatem, possimus atque earum ea laborum delectus fuga quae
+                  velit nobis dolorem vel temporibus? Molestiae, nobis?
+                </p>
+              </div>
+              <div className="news-btn">
+                <a href="#!">read more</a>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-3">
+            <div className="news-item">
+              <div className="news-img">
+                <img src={img3} alt="#!" />
+              </div>
+              <div className="news-content">
+                <p className="news-title">blog one</p>
+                <p className="news-subtitle">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad
+                  voluptatem, possimus atque earum ea laborum delectus fuga quae
+                  velit nobis dolorem vel temporibus? Molestiae, nobis?
+                </p>
+              </div>
+              <div className="news-btn">
+                <a href="#!">read more</a>
               </div>
             </div>
           </div>
