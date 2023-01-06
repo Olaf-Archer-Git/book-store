@@ -2,6 +2,7 @@
 
 .products {
   padding: 50px 0;
+  margin: 50px 0;
   background: $bg-white;
 }
 
@@ -37,48 +38,43 @@
 }
 
 .template {
-  background: $color-light;
-  padding: 50px 10px;
-  border-radius: 10px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-auto-rows: minmax(250px, auto);
-  // gap: 20px;
+  background: $color-light;   
+  padding: 20px;
+
+  &-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    gap: 1px;
+    row-gap: 1.5px;
+    background: $bg-grey;
+    margin: 20px;
+  }
 
   &-item {
-    background: rgb(255, 255, 255);
-
+    background: $bg-white;
     position: relative;
-  }
-
-  &-item::before {
-    content: "";
-    position: absolute;
-    bottom: 0; 
-    right: 0;   
-    width: 90%;
-    border-bottom: 1px solid rgb(99, 99, 99);
-    
-    
-    &::before:first-child{
-      right: 100%;
-    }
-  }
-
-  &-item::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 0;    
-    
-    height: 90%;
-    border-right: 1px solid rgb(100,100,100);
+    padding: 10px ;
   }
 
   &-img {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    width: 100px;
+    height: 100px;
+    bottom: 2%;
+    right: 2%;
+  }
+
+  &-text {
+    padding: 20px 50px;
+    color: $bg-dark;
+  }
+
+  &-title{
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-size: 18px;
   }
 }
 

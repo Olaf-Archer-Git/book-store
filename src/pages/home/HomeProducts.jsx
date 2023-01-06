@@ -1,7 +1,5 @@
 import React from "react";
-import { dataTemplate } from "../../data/dataTemplate.js";
-
-import img from "../../assets/templateOne.png";
+import { dataServices, dataTemplate } from "../../data/dataTemplate.js";
 
 import "./HomeProducts.scss";
 
@@ -12,7 +10,7 @@ const HomeProducts = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="services">
-              {dataTemplate.map((item) => {
+              {dataServices.map((item) => {
                 return (
                   <div className="services-wrap" key={item.id}>
                     {item.logo}
@@ -27,54 +25,18 @@ const HomeProducts = () => {
           </div>
           <div className="col-lg-12">
             <div className="template">
-              <div className="template-item">
-                <img className="template-img" src={img} alt="#!" />
-                <div className="template-text">
-                  <p className="template-title"></p>
-                  <p className="template-subtitle"></p>
-                </div>
-              </div>
-
-              <div className="template-item">
-                <img src="" alt="#!" />
-                <div className="template-text">
-                  <p className="template-title"></p>
-                  <p className="template-subtitle"></p>
-                </div>
-              </div>
-
-              
-
-              <div className="template-item">
-                <img src="" alt="#!" />
-                <div className="template-text">
-                  <p className="template-title"></p>
-                  <p className="template-subtitle"></p>
-                </div>
-              </div>
-
-              <div className="template-item">
-                <img src="" alt="#!" />
-                <div className="template-text">
-                  <p className="template-title"></p>
-                  <p className="template-subtitle"></p>
-                </div>
-              </div>
-
-              <div className="template-item">
-                <img src="" alt="#!" />
-                <div className="template-text">
-                  <p className="template-title"></p>
-                  <p className="template-subtitle"></p>
-                </div>
-              </div>
-
-              <div className="template-item">
-                <img src="" alt="#!" />
-                <div className="template-text">
-                  <p className="template-title"></p>
-                  <p className="template-subtitle"></p>
-                </div>
+              <div className="template-wrap">
+                {dataTemplate.map((item) => {
+                  return (
+                    <div className="template-item" key={item.id}>
+                      <img className="template-img" src={item.img} alt="#!" />
+                      <div className="template-text">
+                        <p className="template-title">{item.title}</p>
+                        <p className="template-subtitle">{item.subtitle}</p>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
