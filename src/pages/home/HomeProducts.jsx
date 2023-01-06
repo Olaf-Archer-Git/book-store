@@ -1,4 +1,5 @@
 import React from "react";
+
 import { dataServices, dataTemplate } from "../../data/dataTemplate.js";
 
 import "./HomeProducts.scss";
