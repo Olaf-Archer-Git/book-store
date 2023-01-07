@@ -6,14 +6,14 @@ import "./HomeProducts.scss";
 
 const HomeProducts = () => {
   return (
-    <section className="products">
+    <section className="home-products">
       <div className="container-xxl">
         <div className="row">
           <div className="col-lg-12">
             <div className="services">
               {dataServices.map((item) => {
                 return (
-                  <div className="services-wrap" key={item.id}>
+                  <div className="services-wrapper" key={item.id}>
                     {item.logo}
                     <div className="services-item">
                       <p className="services-title">{item.title}</p>
@@ -26,7 +26,7 @@ const HomeProducts = () => {
           </div>
           <div className="col-lg-12">
             <div className="template">
-              <div className="template-wrap">
+              <div className="template-wrapper">
                 {dataTemplate.map((item) => {
                   return (
                     <div className="template-item" key={item.id}>
