@@ -22,7 +22,7 @@ export const dataHome = [
     id: 3,
     title: "Simply Awesome",
     subtitle: "The Quicker Picker Upper",
-    gradient: "rgba(68, 34, 72, 0.8), rgba(131, 43, 13, 0.2)",
+    gradient: "rgba(11, 73, 5, 0.5), rgba(76, 190, 5, 0.2)",
     img: bg3,
   },
   {
