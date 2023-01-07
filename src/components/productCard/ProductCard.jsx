@@ -2,7 +2,8 @@ import React from "react";
 import { Rating } from "react-simple-star-rating";
 import { BsSuitHeart } from "react-icons/bs";
 import Button from "../../components/buttons/Button.jsx";
-import img1 from "../../assets/templates/template1.png";
+import img1 from "../../assets/templates/template2.png";
+// import img2 from "../../assets/templates/template3.png";
 
 import "./ProductCard.scss";
 
@@ -16,7 +17,10 @@ const ProductCard = () => {
               <div className="cards-item">
                 <div className="row">
                   <div className="col-lg-5">
-                    <img className="cards-img" src={img1} alt="#!" />
+                    <div className=" position-relative">
+                      <img className="cards-img" src={img1} alt="#!" />
+                      {/* <img className="cards-img hide" src={img2} alt="#!" /> */}
+                    </div>
                   </div>
                   <div className="col-lg-7">
                     <div className="cards-content">
