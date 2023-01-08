@@ -51,7 +51,7 @@ const SpecialCard = () => {
             </div>
             <div className="special-link">
               <Link to="/">
-                option
+                add to cart
               </Link>
             </div>
           </div>

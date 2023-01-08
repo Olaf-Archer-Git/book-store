@@ -20,13 +20,13 @@ const Home = () => {
       <div className="home-head">Special Offer</div>
       <div className="container-xxl">
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-lg-4">
             <SpecialCard />
           </div>
-          <div className="col-md-4">
+          <div className="col-lg-4">
             <SpecialCard />
           </div>
-          <div className="col-md-4">
+          <div className="col-lg-4">
             <SpecialCard />
           </div>
         </div>

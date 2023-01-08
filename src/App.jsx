@@ -4,7 +4,9 @@ import Home from "./pages/home/Home.jsx";
 import Layout from "./components/layout/Layout";
 import Blog from "./pages/blog/Blog.jsx";
 import Contact from "./pages/contact/Contact.jsx";
+import Shop from "./pages/shop/Shop.jsx";
 import "./App.scss";
+
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="blog" element={<Blog />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="shop" element={<Shop />} />
           </Route>
         </Routes>
       </BrowserRouter>

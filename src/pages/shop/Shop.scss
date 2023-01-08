@@ -1,0 +1,67 @@
+@import "../../style/variables.scss";
+
+.shop {
+  padding: 50px 0;
+  background: $color-light;
+}
+
+.aside {
+  &-card {
+    background: $bg-white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 8px $aside;
+  }
+
+  &-title {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: $aside;
+    margin-bottom: 10px;
+  }
+
+  &-list {
+    padding-left: 0;
+
+    & a {
+      font-size: 14px;
+      line-height: 20px;
+      color: $aside-light;
+      text-transform: capitalize;
+    }
+  }
+
+  &-subtitle {
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: $aside-light;
+    padding: 10px 0;
+  }
+}
+
+.form-check-label {
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: $aside-light;
+}
+
+.form-check-input,
+.form-check-input:checked {
+  background-color: $color-primary;
+}
+
+.form-check-input:focus {
+  box-shadow: none;
+  border-color: inherit;
+  border-color: $aside;
+}
+
+.form-control:focus{
+    box-shadow: none;
+    border-color: $color-primary;
+}

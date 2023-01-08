@@ -54,7 +54,7 @@ const HeaderBottom = () => {
                 <Link to="/blog">Blog</Link>
               </li>
               <li>
-                <Link to="/">About</Link>
+                <Link to="/shop">Shop</Link>
               </li>
             </ul>
           </div>
