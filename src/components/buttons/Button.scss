@@ -1,10 +1,7 @@
 @import "../../style/variables.scss";
 
 .button {
-  // padding: 10px 0;
-  // margin: 10px 0;
   display: inline;
-
   &-link {
     color: $btn-color;
     border: 2px solid $btn-color;

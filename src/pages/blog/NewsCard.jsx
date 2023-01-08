@@ -1,7 +1,7 @@
 import React from "react";
 
 import img1 from "../../assets/templates/template-1.jpg";
-import img2 from "../../assets/templates/template-2.jpg";
+import img2 from "../../assets/templates/template2.png";
 import img3 from "../../assets/templates/template-3.jpg";
 import img4 from "../../assets/templates/template-4.jpg";
 import Button from "../../components/buttons/Button";

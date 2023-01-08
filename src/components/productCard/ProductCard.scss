@@ -7,7 +7,7 @@
 
   &-wrapper {
     background: rgb(124, 124, 124);
-    padding: 20px;
+    padding: 10px;
     margin: 20px 0;
   }
 
@@ -39,7 +39,7 @@
   &-title {
     padding: 10px 0;
     text-transform: capitalize;
-    font-size: 21px;
+    font-size: 18px;
     font-weight: bold;
     max-width: 280px;
   }
@@ -54,12 +54,11 @@
 
   &-subtitle {
     height: 30px;
-    padding-bottom: 10px;
   }
 
   &-link {
     color: $color-primary;
-    font-size: 18px;
+    font-size: 15px;
     letter-spacing: 1.2px;
   }
 
@@ -68,15 +67,15 @@
   }
 
   &-price {
-    padding: 10px 0;
+    padding: 30px 0;
     letter-spacing: 1.5px;
-    font-size: 21px;
+    font-size: 18px;
     color: $bg-dark;
     font-weight: bold;
   }
 
   &-btn {
-    padding-top: 20px;
+    padding-top: 30px;
 
     & a:last-child {
       margin-right: 10px;

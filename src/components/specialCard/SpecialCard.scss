@@ -1,0 +1,23 @@
+@import "../../style/variables.scss";
+
+.special {
+  padding: 50px 0;
+
+  &-wrapper {
+    background: $bg-white;
+    border-radius: 10px;
+  }
+
+  &-item {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-img {
+    & img {
+      max-width: 200px;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+}
