@@ -1,0 +1,118 @@
+@import "../../style/variables.scss";
+
+.shop {
+  padding: 50px 0;
+  background: $color-light;
+}
+
+.aside {
+  &-card {
+    background: $bg-white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 10px $aside;
+  }
+
+  &-title {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: $aside;
+    margin-bottom: 10px;
+  }
+
+  &-list {
+    padding-left: 0;
+
+    & a {
+      font-size: 14px;
+      line-height: 20px;
+      color: $aside-light;
+      text-transform: capitalize;
+    }
+  }
+
+  &-subtitle {
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: $aside-light;
+  }
+
+  &-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 0;
+
+    & span {
+      padding: 2px 10px;
+      background: rgb(200, 200, 200);
+      border-radius: 5px;
+      color: $aside;
+      text-transform: lowercase;
+    }
+  }
+
+  &-random {
+    padding: 10px 0;
+    display: flex;
+    border-bottom: 1px solid $aside;
+  }
+
+  &-random-img {
+    width: 30%;
+
+    & img {
+      width: 70px;
+      height: auto;
+    }
+  }
+
+  &-random-text {
+    width: 70%;
+    text-transform: capitalize;
+
+    & p {
+      margin-bottom: 5px;
+    }
+  }
+
+  &-random-title {
+    color: $aside-light;
+    font-weight: bold;
+  }
+
+  &-random-price {
+    & span {
+      padding-left: 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $aside;
+    }
+  }
+}
+
+.form-check-label {
+  font-size: 15px;
+  font-weight: bold;
+  color: $aside-light;
+}
+
+.form-check-input,
+.form-check-input:checked {
+  background-color: $color-primary;
+}
+
+.form-check-input:focus {
+  box-shadow: none;
+  border-color: inherit;
+  border-color: $aside;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: $color-primary;
+}

@@ -1,8 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Shop.scss";
+import img1 from "../../assets/templateFour.png";
+import img2 from "../../assets/templates/special2.png";
+import "./AsideShop.scss";
 
 const AsideShop = () => {
+  const sizes = [
+    { name: "s", color: 1 },
+    { name: "m", color: 2 },
+    { name: "l", color: 3 },
+    { name: "xl", color: 4 },
+    { name: "xxl", color: 5 },
+  ];
   return (
     <aside className="aside">
       <div className="aside-card">
@@ -74,29 +83,62 @@ const AsideShop = () => {
             </div>
           </div>
 
+          <p className="aside-subtitle">size of book</p>
           {/* map to checkbox */}
-          <p className="aside-subtitle">size</p>
-          <div>
-            <div className="form-check">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                value=""
-                id="color-1"
-              />
-              <label className="form-check-label" htmlFor="color-1">
-                S (2)
-              </label>
-            </div>
-          </div>
+          {sizes.map((item) => {
+            return (
+              <div key={item.color}>
+                <div className="form-check">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id={`color-${item.color}`}
+                  />
+                  <label
+                    className="form-check-label"
+                    htmlFor={`color-${item.color}`}
+                  >
+                    {item.name}
+                  </label>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
       {/* map to checkbox */}
       <div className="aside-card">
         <p className="aside-title">product tag</p>
+        <div className="aside-tags">
+          <span>detective</span>
+          <span>history</span>
+          <span>poetry</span>
+          <span>novel</span>
+          <span>fiction</span>
+        </div>
       </div>
       <div className="aside-card">
         <p className="aside-title">random book</p>
+        <div className="aside-random">
+          <div className="aside-random-img">
+            <img src={img1} alt="#!" />
+          </div>
+          <div className="aside-random-text">
+            <p className="aside-random-title">name of the book</p>
+            <p className="aside-random-subtitle">description</p>
+          </div>
+        </div>
+        <div className="aside-random">
+          <div className="aside-random-img">
+            <img src={img2} alt="#!" />
+          </div>
+          <div className="aside-random-text">
+            <p className="aside-random-title">name of the book</p>
+            <p className="aside-random-subtitle">description</p>
+            <p className="aside-random-price">special<span>$25</span></p>
+          </div>
+        </div>
       </div>
     </aside>
   );

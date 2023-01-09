@@ -1,7 +1,7 @@
 import React from "react";
 
 import img1 from "../../assets/templates/template-1.jpg";
-import img2 from "../../assets/templates/template2.png";
+import img2 from "../../assets/templates/template-8.jpg";
 import img3 from "../../assets/templates/template-3.jpg";
 import img4 from "../../assets/templates/template-4.jpg";
 import Button from "../../components/buttons/Button";
@@ -36,16 +36,14 @@ const NewsCard = () => {
               </div>
               <div className="news-content">
                 <p className="news-title">blog one</p>
-                <p className="news-subtitle">
-                  earum ea laborum delectus fuga quae velit nobis dolorem vel
-                  temporibus? Molestiae, nobis?
-                </p>
+                <p className="news-subtitle">earum ea laborum delectus fuga</p>
               </div>
               <div className="news-btn">
                 <Button text={"read more"} />
               </div>
             </div>
           </div>
+
           <div className="col-lg-3">
             <div className="news-item">
               <div className="news-img">

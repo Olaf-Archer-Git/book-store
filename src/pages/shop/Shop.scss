@@ -1,67 +1,56 @@
 @import "../../style/variables.scss";
 
 .shop {
-  padding: 50px 0;
-  background: $color-light;
-}
-
-.aside {
-  &-card {
+  &-filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10px;
     background: $bg-white;
     border-radius: 10px;
-    padding: 10px 15px;
-    margin-bottom: 20px;
-    box-shadow: 2px 2px 8px $aside;
+    box-shadow: 1px 1px 5px $color-primary;
+    
   }
 
-  &-title {
-    text-transform: capitalize;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 20px;
-    color: $aside;
-    margin-bottom: 10px;
+  &-box {
+    display: flex;
+    align-items: center;
+    max-width: 40%;
+    width: 100%;
+    gap: 20px;
   }
 
-  &-list {
-    padding-left: 0;
+  &-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-right: 20px;
 
-    & a {
-      font-size: 14px;
-      line-height: 20px;
-      color: $aside-light;
-      text-transform: capitalize;
+    & svg {
+      font-size: 30px;
+      cursor: pointer;
+      color: $aside;
+      padding: 5px;
+      background: rgb(220, 220, 220);
+      border-radius: 5px;
     }
   }
 
-  &-subtitle {
-    font-size: 15px;
-    font-weight: bold;
-    text-transform: capitalize;
-    color: $aside-light;
-    padding: 10px 0;
+  &-products {
+    margin: auto 10px;
   }
 }
 
-.form-check-label {
-  font-size: 15px;
+.filter-title {
   font-weight: bold;
+  font-size: 18px;
+  color: $bg-dark;
   text-transform: capitalize;
-  color: $aside-light;
+  margin-bottom: 0;
+  padding-left: 10px;
 }
 
-.form-check-input,
-.form-check-input:checked {
-  background-color: $color-primary;
-}
-
-.form-check-input:focus {
-  box-shadow: none;
-  border-color: inherit;
-  border-color: $aside;
-}
-
-.form-control:focus{
-    box-shadow: none;
-    border-color: $color-primary;
+.form-select {
+  max-width: 60%;
+  width: 100%;
 }

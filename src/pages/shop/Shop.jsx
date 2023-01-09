@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import BreadCrumbs from "../../components/breadcrumbs/BreadCrumbs";
 import Meta from "../../components/meta/Meta";
-import AsideShop from "./AsideShop";
+import {
+  TfiLayoutColumn2,
+  TfiLayoutGrid2,
+  TfiLayoutGrid3,
+} from "react-icons/tfi";
+import AsideShop from "./AsideShop.jsx";
+import SpecialCard from "../../components/specialCard/SpecialCard.jsx";
+
 import "./Shop.scss";
 
 const Shop = () => {
+  const [sortLayout, setSortLayout] = useState("");
+
   return (
     <>
       <Meta title={"Shop"} />
@@ -15,7 +24,45 @@ const Shop = () => {
             <div className="col-lg-3">
               <AsideShop />
             </div>
-            <div className="col-lg-9"></div>
+            <div className="col-lg-9">
+              <div className="shop-filter">
+                <div className="shop-box">
+                  <p className="filter-title">Sort By:</p>
+                  <select name="" id="" className="form-control form-select">
+                    <option value="best-selling">Rating</option>
+                    <option value="price-ascending">Price, Low To Hight</option>
+                    <option value="price-descending">Price, High To Low</option>
+                    <option value="date-ascending">Newest</option>
+                    <option value="date-descending">Oldest</option>
+                  </select>
+                </div>
+                <div className="shop-sort">
+                  <div className="shop-item">
+                    <p className="shop-products">number of products</p>
+                    <TfiLayoutColumn2
+                      onClick={() => {
+                        setSortLayout("col-lg-12");
+                      }}
+                    />
+                    <TfiLayoutGrid2
+                      onClick={() => {
+                        setSortLayout("col-lg-6");
+                      }}
+                    />
+                    <TfiLayoutGrid3
+                      onClick={() => {
+                        setSortLayout("col-lg-4");
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="shop-list ">
+                <div className="row">
+                  <SpecialCard sortLayout={sortLayout} />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
