@@ -9,7 +9,7 @@ import img4 from "../assets/templateFour.png";
 import img5 from "../assets/templateFive.png";
 import img6 from "../assets/templateSix.png";
 
-export const dataServices = [
+export const dataBanner = [
   {
     id: 1,
     logo: <MdOutlineLocalShipping />,

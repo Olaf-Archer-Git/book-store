@@ -1,16 +1,26 @@
 @import "../../style/variables.scss";
 
 .home {
-  background: $color-light;
+  background: $grey;
   padding: 50px 0;
 
-  &-head {
-    text-transform: uppercase;
-    font-size: 21px;
-    font-weight: bold;
-    text-align: center;
-    margin: 50px 0;
+  & section {
+    padding: 50px 0;
   }
+
+  &-caption {
+    text-align: center;
+    padding-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-weight: bold;
+    font-size: 21px;
+    color: $brown;
+  }
+
+  //^^^^^not to remove/////
+  //////
+  //////
 
   &-banner {
     position: relative;
@@ -54,7 +64,12 @@
   }
 }
 
-.specialcard {
-  display: flex;
-  justify-content: space-between;
+/////do not move//////
+.news {
+  background: $white;
 }
+
+.banner {
+  background: $white;
+}
+/////////

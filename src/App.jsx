@@ -5,8 +5,7 @@ import Layout from "./components/layout/Layout";
 import Blog from "./pages/blog/Blog.jsx";
 import Contact from "./pages/contact/Contact.jsx";
 import Shop from "./pages/shop/Shop.jsx";
-import "./App.scss";
-
+import "./style/App.scss";
 
 function App() {
   return (

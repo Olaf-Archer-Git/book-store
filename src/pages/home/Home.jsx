@@ -1,22 +1,41 @@
 import React from "react";
 
 import HomeGrid from "./HomeGrid";
-import HomeProducts from "./HomeProducts";
-import NewsCard from "../blog/NewsCard";
-// import ProductCard from "../../components/productCard/ProductCard";
+
+import NewsCard from "../../components/newsCard/NewsCard.jsx";
 
 import "./Home.scss";
 import SpecialCard from "../../components/specialCard/SpecialCard";
+import Banner from "../../components/banner/Banner";
+import HomeProducts from "./HomeProducts";
 
 const Home = () => {
   return (
     <section className="home">
-      <div className="container-xxl">
-        <HomeGrid />
+      <HomeGrid />
+      <section className="banner">
+        <div className="container-xxl">
+          <div className="row">
+            <Banner />
+          </div>
+        </div>
+      </section>
+      <section className="main-banner">
         <HomeProducts />
-        <div className="home-head">News card</div>
-        <NewsCard />
-        <div className="home-head">Special Offer</div>
+      </section>
+      <section className="news">
+        <div className="container-fluid">
+          <h2 className="home-caption">News card</h2>
+          <div className="row">
+            <NewsCard />
+            <NewsCard />
+            <NewsCard />
+            <NewsCard />
+          </div>
+        </div>
+      </section>
+      <h2 className="home-caption">Special Offer</h2>
+      <div className="container-xxl">
         <div className="row">
           <SpecialCard />
           <SpecialCard />
@@ -28,6 +47,7 @@ const Home = () => {
 };
 
 export default Home;
+
 {
   /* <div className="home-head">New Arrival</div> */
 }

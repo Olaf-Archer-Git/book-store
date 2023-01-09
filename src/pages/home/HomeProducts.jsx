@@ -1,6 +1,6 @@
 import React from "react";
 
-import { dataServices, dataTemplate } from "../../data/dataTemplate.js";
+import { dataTemplate } from "../../data/dataTemplate.js";
 
 import "./HomeProducts.scss";
 
@@ -9,21 +9,6 @@ const HomeProducts = () => {
     <section className="home-products">
       <div className="container-xxl">
         <div className="row">
-          <div className="col-lg-12">
-            <div className="services">
-              {dataServices.map((item) => {
-                return (
-                  <div className="services-wrapper" key={item.id}>
-                    {item.logo}
-                    <div className="services-item">
-                      <p className="services-title">{item.title}</p>
-                      <p className="services-subtitle">{item.subtitle}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
           <div className="col-lg-12">
             <div className="template">
               <div className="template-wrapper">
