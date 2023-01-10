@@ -2,7 +2,7 @@ import React from "react";
 import ReactStars from "react-rating-stars-component";
 import { BsSuitHeart } from "react-icons/bs";
 import Button from "../../components/buttons/Button.jsx";
-import img1 from "../../assets/templates/template2.png";
+import img1 from "../../assets/book4.png";
 
 import "./ProductCard.scss";
 
@@ -31,7 +31,7 @@ const ProductCard = () => {
                   read more ...
                 </a>
                 <div className="cards-price">
-                  $25.50 &nbsp;&nbsp; <strike>$30.50</strike>
+                  $25.50 &nbsp;<strike>$30.50</strike>
                 </div>
                 <ReactStars
                   count={5}

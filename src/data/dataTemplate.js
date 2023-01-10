@@ -7,7 +7,7 @@ import img2 from "../assets/templateTwo.png";
 import img3 from "../assets/templateThree.png";
 import img4 from "../assets/templateFour.png";
 import img5 from "../assets/templateFive.png";
-import img6 from "../assets/templateSix.png";
+import img6 from "../assets/book3.png";
 
 export const dataBanner = [
   {
@@ -42,7 +42,7 @@ export const dataBanner = [
   },
 ];
 
-export const dataTemplate = [
+export const dataMainBanner = [
   { id: "1", img: img1, title: "detective", subtitle: "Reading is essential" },
   {
     id: "2",

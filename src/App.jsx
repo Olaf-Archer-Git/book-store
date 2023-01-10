@@ -9,7 +9,7 @@ import "./style/App.scss";
 
 function App() {
   return (
-    <main className="App">
+    <>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -20,7 +20,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </main>
+    </>
   );
 }
 
