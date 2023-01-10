@@ -6,7 +6,7 @@ import "./NewsCard.scss";
 
 const NewsCard = () => {
   return (
-    <div className="col-md-3">
+    <div className="col-lg-3">
       <div className="news-box">
         <div className="news-img">
           <img src={img1} alt="#!" />

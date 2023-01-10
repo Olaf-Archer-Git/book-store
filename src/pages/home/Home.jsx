@@ -2,7 +2,7 @@ import React from "react";
 import NewsCard from "../../components/newsCard/NewsCard.jsx";
 import SpecialCard from "../../components/specialCard/SpecialCard";
 import Banner from "../../components/banner/Banner";
-import MainBanner from "../../pages/mainBanner/MainBanner";
+import MainBanner from "../../components/mainBanner/MainBanner";
 
 ////***********////
 import "./Home.scss";
@@ -15,6 +15,7 @@ const Home = () => {
     <main className="home">
       <section className="promotion">
         <div className="container-xxl">
+          <h2 className="home-caption">Promotion</h2>
           <div className="row">
             <Promotion />
           </div>
@@ -46,29 +47,18 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <h2 className="home-caption">Special Offer</h2>
-      <div className="container-xxl">
-        <div className="row">
-          <SpecialCard />
-          <SpecialCard />
-          <SpecialCard />
+      <section className="special">
+        <h2 className="home-caption">Special Offer</h2>
+        <div className="container-xxl">
+          <div className="row">
+            <SpecialCard />
+            <SpecialCard />
+            <SpecialCard />
+          </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 };
 
 export default Home;
-
-{
-  /* <div className="home-head">New Arrival</div> */
-}
-{
-  /* <div className="container-xxl">
-        <div className="row">
-          <div className="col-md-6">
-            <ProductCard />
-          </div>
-        </div>
-      </div> */
-}
