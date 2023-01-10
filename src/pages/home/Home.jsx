@@ -4,11 +4,12 @@ import HomeGrid from "./HomeGrid";
 
 import NewsCard from "../../components/newsCard/NewsCard.jsx";
 
-import "./Home.scss";
 import SpecialCard from "../../components/specialCard/SpecialCard";
 import Banner from "../../components/banner/Banner";
 import HomeProducts from "./HomeProducts";
 
+////***********////
+import "./Home.scss";
 const Home = () => {
   return (
     <section className="home">
