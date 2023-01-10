@@ -1,0 +1,79 @@
+@import "../../style/App.scss";
+@import "../../style/variables.scss";
+
+.promotion {
+  &-container {
+    background-image: linear-gradient(
+        320deg,
+        rgba(34, 23, 10, 0.3),
+        rgba(10, 21, 37, 0.5)
+      ),
+      url(../../assets/grid-bg5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    height: 450px;
+    margin-bottom: 10px;
+  }
+
+  &-title,
+  &-subtitle {
+    color: $white;
+    text-transform: capitalize;
+    letter-spacing: 1.1px;
+  }
+
+  &-title {
+    padding: 30px 50px 20px 50px;
+    font-size: 27px;
+  }
+
+  &-subtitle {
+    padding: 10px 50px 40px 50px;
+    font-size: 17px;
+
+    & span {
+      color: $grey;
+      font-weight: bold;
+      margin-left: 10px;
+      font-size: 17px;
+    }
+  }
+
+  &-btn {
+    padding: 0 50px;
+
+    & a {
+      color: $grey;
+      padding: 5px 30px;
+      border: 2px solid $grey;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      border-radius: 5px;
+    }
+
+    & a:hover {
+      color: $grey;
+      background: $brown;
+      border-color: $grey;
+    }
+  }
+
+  &-box {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    text-align: left;
+    margin: 0 0 20px 0;
+    height: 215px;
+
+    & h3,
+    & p {
+      text-align: center;
+      color: $white;
+      padding: 10px;
+    }
+  }
+}

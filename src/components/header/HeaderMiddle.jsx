@@ -10,7 +10,7 @@ const HeaderMiddle = () => {
       <div className="container-xxl">
         <div className="row">
           <div className="col-sm-3">
-            <h1 className="middle-logo">Book Store</h1>
+            <h2 className="middle-logo">Book Store</h2>
           </div>
           <div className="col-lg-4">
             <div className="middle-form">

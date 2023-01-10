@@ -1,18 +1,24 @@
 import React from "react";
-
-import HomeGrid from "./HomeGrid";
-
 import NewsCard from "../../components/newsCard/NewsCard.jsx";
-
-import "./Home.scss";
 import SpecialCard from "../../components/specialCard/SpecialCard";
 import Banner from "../../components/banner/Banner";
 import MainBanner from "../../components/mainBanner/MainBanner";
 
+///////////
+import "./Home.scss";
+import Promotion from "../../components/promotion/Promotion.jsx";
+//////
 const Home = () => {
   return (
-    <section className="home">
-      <HomeGrid />
+    <main className="home">
+      <section className="promotion">
+        <div className="container-xxl">
+          <div className="row">
+            <Promotion />
+          </div>
+        </div>
+      </section>
+
       <section className="banner">
         <div className="container-fluid">
           <div className="row">
@@ -46,7 +52,7 @@ const Home = () => {
           <SpecialCard />
         </div>
       </div>
-    </section>
+    </main>
   );
 };
 
