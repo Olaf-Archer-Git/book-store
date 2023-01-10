@@ -3,10 +3,6 @@ import bg2 from "../assets/grid-bg2.jpg";
 import bg3 from "../assets/grid-bg3.jpg";
 import bg4 from "../assets/grid-bg4.jpg";
 
-
-
-
-
 export const dataPromotion = [
   {
     id: 1,

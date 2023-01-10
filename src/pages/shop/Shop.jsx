@@ -60,6 +60,9 @@ const Shop = () => {
               <div className="shop-list ">
                 <div className="row">
                   <SpecialCard sortLayout={sortLayout} />
+                  <SpecialCard sortLayout={sortLayout} />
+                  <SpecialCard sortLayout={sortLayout} />
+                  <SpecialCard sortLayout={sortLayout} />
                 </div>
               </div>
             </div>
