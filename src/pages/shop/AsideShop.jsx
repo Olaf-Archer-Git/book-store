@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import img1 from "../../assets/templateFour.png";
-import img2 from "../../assets/templates/special2.png";
+import img2 from "../../assets/book3.png";
 import "./AsideShop.scss";
 
 const AsideShop = () => {

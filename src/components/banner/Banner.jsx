@@ -11,7 +11,7 @@ const Banner = () => {
           return (
             <div className="banner-box" key={item.id}>
               {item.logo}
-              <div>
+              <div className="banner-content">
                 <p className="banner-title">{item.title}</p>
                 <p className="banner-subtitle">{item.subtitle}</p>
               </div>
