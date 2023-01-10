@@ -11,6 +11,7 @@ const HomeProducts = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="template">
+<<<<<<< Updated upstream
               <div className="template-wrapper">
                 {dataTemplate.map((item) => {
                   return (
@@ -23,6 +24,69 @@ const HomeProducts = () => {
                     </div>
                   );
                 })}
+=======
+              <div className="template-wrap">
+                <div className="template-item">
+                  <img className="template-img" src={img} alt="#!" />
+                  <div className="template-text">
+                    <p className="template-title">tots</p>
+                    <p className="template-subtitle">pots</p>
+                  </div>
+                </div>
+
+                <div className="template-item">
+                  <img className="template-img" src={img} alt="#!" />
+                  <div className="template-text">
+                    <p className="template-title">tots</p>
+                    <p className="template-subtitle">pots</p>
+                  </div>
+                </div>
+
+                <div className="template-item">
+                  <img className="template-img" src={img} alt="#!" />
+                  <div className="template-text">
+                    <p className="template-title">tots</p>
+                    <p className="template-subtitle">pots</p>
+                  </div>
+                </div>
+
+                <div className="template-item">
+                  <img className="template-img" src={img} alt="#!" />
+                  <div className="template-text">
+                    <p className="template-title">tots</p>
+                    <p className="template-subtitle">pots</p>
+                  </div>
+                </div>
+                <div className="template-item">
+                  <img className="template-img" src={img} alt="#!" />
+                  <div className="template-text">
+                    <p className="template-title">tots</p>
+                    <p className="template-subtitle">pots</p>
+                  </div>
+                </div>
+                <div className="template-item">
+                  <img className="template-img" src={img} alt="#!" />
+                  <div className="template-text">
+                    <p className="template-title">tots</p>
+                    <p className="template-subtitle">pots</p>
+                  </div>
+                </div>
+                <div className="template-item">
+                  <img className="template-img" src={img} alt="#!" />
+                  <div className="template-text">
+                    <p className="template-title">tots</p>
+                    <p className="template-subtitle">pots</p>
+                  </div>
+                </div>
+
+                <div className="template-item">
+                  <img className="template-img" src={img} alt="#!" />
+                  <div className="template-text">
+                    <p className="template-title">tots</p>
+                    <p className="template-subtitle">pots</p>
+                  </div>
+                </div>
+>>>>>>> Stashed changes
               </div>
             </div>
           </div>
