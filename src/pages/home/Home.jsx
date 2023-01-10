@@ -1,22 +1,15 @@
 import React from "react";
 import NewsCard from "../../components/newsCard/NewsCard.jsx";
-<<<<<<< HEAD
-
-=======
->>>>>>> d42be6c654e130923f2f4fcd75b1dbeb95f4b35b
 import SpecialCard from "../../components/specialCard/SpecialCard";
 import Banner from "../../components/banner/Banner";
-import MainBanner from "../../components/mainBanner/MainBanner";
+import MainBanner from "../../pages/mainBanner/MainBanner";
 
-<<<<<<< HEAD
 ////***********////
 import "./Home.scss";
-=======
-///////////
+
 import "./Home.scss";
 import Promotion from "../../components/promotion/Promotion.jsx";
-//////
->>>>>>> d42be6c654e130923f2f4fcd75b1dbeb95f4b35b
+
 const Home = () => {
   return (
     <main className="home">
