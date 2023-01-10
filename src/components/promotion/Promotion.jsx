@@ -25,10 +25,9 @@ const Promotion = () => {
           <div className="row">
             {dataPromotion.map((item) => {
               return (
-                <div className="col-lg-6">
+                <div className="col-lg-6" key={item.id}>
                   <div
                     className="promotion-box"
-                    key={item.id}
                     style={{
                       backgroundImage: `linear-gradient( ${item.gradient}), url("${item.img}")`,
                     }}

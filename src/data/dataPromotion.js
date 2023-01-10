@@ -3,6 +3,13 @@ import bg2 from "../assets/grid-bg2.jpg";
 import bg3 from "../assets/grid-bg3.jpg";
 import bg4 from "../assets/grid-bg4.jpg";
 
+const randomNumber = Math.floor(Math.random() * 10) + 1;
+
+export const randomColor = {
+  1: randomNumber,
+  2: randomNumber,
+};
+
 export const dataPromotion = [
   {
     id: 1,

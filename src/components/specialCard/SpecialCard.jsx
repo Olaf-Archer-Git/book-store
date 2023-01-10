@@ -12,8 +12,6 @@ const SpecialCard = ({ sortLayout }) => {
     console.log("newRating");
   };
 
-  console.log(location);
-
   return (
     <div
       className={` ${
