@@ -5,7 +5,8 @@
 
   &-wrapper {
     background: $bg-white;
-    border-radius: 10px;
+    border-radius: 10px; 
+    margin:  5px;
   }
 
   &-item {
@@ -23,12 +24,14 @@
   }
 
   &-content {
-    padding: 10px 40px 10px 10px;
+    padding: 10px 30px 10px 10px;
   }
 
   &-title {
     font-size: 18px;
     text-transform: capitalize;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 
   &-price {
@@ -40,11 +43,12 @@
 
   &-till {
     display: flex;
-    margin-top: 10px;
+   
     & p {
       font-weight: bold;
       text-transform: uppercase;
       padding-right: 10px;
+      margin-top: 5px;
     }
 
     & span {

@@ -7,9 +7,10 @@ import {
   TfiLayoutGrid3,
 } from "react-icons/tfi";
 import AsideShop from "./AsideShop.jsx";
-import SpecialCard from "../../components/specialCard/SpecialCard.jsx";
+import ProductCard from "../../components/productCard/ProductCard";
 
 import "./Shop.scss";
+
 
 const Shop = () => {
   const [sortLayout, setSortLayout] = useState("");
@@ -57,12 +58,10 @@ const Shop = () => {
                   </div>
                 </div>
               </div>
-              <div className="shop-list ">
+              <div className="shop-list">
                 <div className="row">
-                  <SpecialCard sortLayout={sortLayout} />
-                  <SpecialCard sortLayout={sortLayout} />
-                  <SpecialCard sortLayout={sortLayout} />
-                  <SpecialCard sortLayout={sortLayout} />
+                  {/* <SpecialCard sortLayout={sortLayout} /> */}
+                  <ProductCard sortLayout={sortLayout}/>
                 </div>
               </div>
             </div>

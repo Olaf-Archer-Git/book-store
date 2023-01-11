@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const BreadCrumbs = (props) => {
-  const { title } = props;
+const BreadCrumbs = ({ title }) => {
   return (
     <section className="breadcrumbs py-3">
       <div className="container-xl">

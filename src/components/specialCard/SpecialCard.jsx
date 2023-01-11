@@ -24,7 +24,7 @@ const SpecialCard = ({ sortLayout }) => {
             <img src={img1} alt="#!" />
           </div>
           <div className="special-content">
-            <p className="special-brand">sale</p>
+            <span className="special-brand">sale </span>
             <h3 className="special-title">name of the book</h3>
             <ReactStars
               count={5}
