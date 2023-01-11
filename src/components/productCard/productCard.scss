@@ -1,35 +1,82 @@
 @import "../../style/variables.scss";
 @import "../../style/App.scss";
 
-.product {
+.cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
+
   &-container {
+    width: 100%;
     background: $white;
-    border-radius: 10px;
-    box-shadow: 2px 2px 8px $grey;
-    text-align: center;
   }
+
+  &-large {
+    display: flex;
+    width: 100%;
+    background: $white;
+  }
+
+  &-middle {
+    max-width: 310px;
+    width: 100%;
+    background: $white;
+  }
+
+  &-wrapper {
+    position: relative;
+  }
+
   &-img {
+    background: $grey;
+
     & img {
       width: 100%;
-      max-width: 200px;
-      max-height: 300px;
+      height: auto;
       object-fit: cover;
     }
   }
 
   &-box {
-    & p {
-      margin-bottom: 10px;
+    padding: 20px;
+    text-align: center;
+    word-wrap: break-word;
+    margin: auto 0;
+  }
+
+  &-title {
+    font-size: 21px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: $blue;
+    padding-bottom: 15px;
+    padding-left: 25px;
+  }
+
+  &-subtitle {
+    font-size: 18px;
+    color: $green;
+    padding-bottom: 20px;
+  }
+
+  &-rating {
+    & div {
+      margin: 0 auto;
     }
   }
 
-  &-btn {
-    padding: 10px 25px;
-    border: 2px solid $brown;
-    background: $brown;
-    color: $white;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+  &-like {
+    font-size: 25px;
     cursor: pointer;
+    color: $orange;
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
+    padding-left: 7px;
+    background: $blue;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
   }
 }

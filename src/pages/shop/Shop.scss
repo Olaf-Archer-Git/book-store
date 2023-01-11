@@ -7,8 +7,8 @@
     justify-content: space-between;
     padding: 15px 10px;
     background: $bg-white;
-    border-radius: 10px;
-    box-shadow: 1px 1px 5px $color-primary;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px $orange;
     margin-bottom: 20px;
   }
 
@@ -38,12 +38,6 @@
 
   &-products {
     margin: auto 10px;
-  }
-}
-
-.shop-list {
-  & div {
-    padding: 5px;
   }
 }
 

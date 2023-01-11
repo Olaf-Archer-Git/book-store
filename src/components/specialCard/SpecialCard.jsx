@@ -1,23 +1,17 @@
 import React from "react";
 import ReactStars from "react-rating-stars-component";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import img1 from "../../assets/book2.png";
 import "./SpecialCard.scss";
 
 const SpecialCard = ({ sortLayout }) => {
-  const location = useLocation();
-
   const ratingChanged = () => {
     console.log("newRating");
   };
 
   return (
-    <div
-      className={` ${
-        location.pathname === "/shop" ? `${sortLayout}` : "col-lg-4"
-      }`}
-    >
+    <div className="col-md-4">
       <div className="special-wrapper">
         <div className="special-item">
           <div className="special-img">

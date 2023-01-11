@@ -1,19 +1,14 @@
 import React, { useState } from "react";
 import BreadCrumbs from "../../components/breadcrumbs/BreadCrumbs";
 import Meta from "../../components/meta/Meta";
-import {
-  TfiLayoutColumn2,
-  TfiLayoutGrid2,
-  TfiLayoutGrid3,
-} from "react-icons/tfi";
+import { TfiLayoutGrid2, TfiLayoutGrid3 } from "react-icons/tfi";
 import AsideShop from "./AsideShop.jsx";
 import ProductCard from "../../components/productCard/ProductCard";
 
 import "./Shop.scss";
 
-
 const Shop = () => {
-  const [sortLayout, setSortLayout] = useState("");
+  const [sortLayout, setSortLayout] = useState("cards-middle");
 
   return (
     <>
@@ -40,19 +35,14 @@ const Shop = () => {
                 <div className="shop-sort">
                   <div className="shop-item">
                     <p className="shop-products">number of products</p>
-                    <TfiLayoutColumn2
-                      onClick={() => {
-                        setSortLayout("col-lg-12");
-                      }}
-                    />
                     <TfiLayoutGrid2
                       onClick={() => {
-                        setSortLayout("col-lg-6");
+                        setSortLayout("cards-large");
                       }}
                     />
                     <TfiLayoutGrid3
                       onClick={() => {
-                        setSortLayout("col-lg-4");
+                        setSortLayout("cards-middle");
                       }}
                     />
                   </div>
@@ -60,8 +50,7 @@ const Shop = () => {
               </div>
               <div className="shop-list">
                 <div className="row">
-                  {/* <SpecialCard sortLayout={sortLayout} /> */}
-                  <ProductCard sortLayout={sortLayout}/>
+                  <ProductCard sortLayout={sortLayout} />
                 </div>
               </div>
             </div>

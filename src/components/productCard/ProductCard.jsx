@@ -1,34 +1,113 @@
 import React from "react";
 import ReactStars from "react-rating-stars-component";
-import img1 from "../../assets/book3.png";
+import { BsSuitHeart } from "react-icons/bs";
+import { Link, useLocation } from "react-router-dom";
+import img1 from "../../assets/book1.png";
 
 import "./productCard.scss";
 
-const ProductCard = () => {
+const ProductCard = ({ sortLayout }) => {
+  const location = useLocation();
+
   const ratingChanged = () => {
     console.log("newRating");
   };
   return (
-    <div className="col-lg-4">
-      <div className="product-container">
-        <div className="product-img">
-          <img src={img1} alt="#!" />
+    <div className="col-lg-6">
+      <section className="cards">
+        <div
+          className={` ${
+            location.pathname === "/shop" ? `${sortLayout}` : "cards-middle"
+          }`}
+        >
+          <div className="cards-wrapper">
+            <div className="cards-img">
+              <img src={img1} alt="#!" />
+            </div>
+            <div title="add to favorite" className="cards-like">
+              <BsSuitHeart />
+            </div>
+          </div>
+          <div className="cards-box">
+            <div className="cards-title">One Hundred Years of Solitude</div>
+            <div className="cards-subtitle">
+              Hubert Blaine Wolfeschlegelsteinhausenbergerdorff Sr
+            </div>
+            <div className="cards-rating">
+              <ReactStars
+                count={5}
+                onChange={ratingChanged}
+                size={21}
+                activeColor="#ffd700"
+              />
+            </div>
+
+            <div className="btn-main">
+              <Link>add to cart</Link>
+            </div>
+          </div>
         </div>
-        <div className="product-box">
-          <p className="product-title">Name Of The Book</p>
-          <p className="product-subtitle">Author's Name</p>
-          <p>$100</p>
+
+        {/* <div className="cards-container">
+        <div className="cards-wrapper">
+          <div className="cards-img">
+            <img src={img1} alt="#!" />
+          </div>
+          <div title="add to favorite" className="cards-like">
+            <BsSuitHeart />
+          </div>
         </div>
-        
-        <div className="d-flex justify-content-center">
-        <ReactStars
-          count={5}
-          onChange={ratingChanged}
-          size={21}
-          activeColor="#ffd700"
-        /></div>
-        <div className="product-btn">buy now</div>
+        <div className="cards-box">
+          <div className="cards-title">One Hundred Years of Solitude</div>
+
+          <div className="cards-subtitle">
+            Hubert Blaine Wolfeschlegelsteinhausenbergerdorff Sr
+          </div>
+          <div className="cards-rating">
+            <ReactStars
+              count={5}
+              onChange={ratingChanged}
+              size={21}
+              activeColor="#ffd700"
+            />
+          </div>
+
+          <div className="btn-main">
+            <Link>add to cart</Link>
+          </div>
+        </div>
       </div>
+
+      <div className="cards-container">
+        <div className="cards-wrapper">
+          <div className="cards-img">
+            <img src={img1} alt="#!" />
+          </div>
+          <div title="add to favorite" className="cards-like">
+            <BsSuitHeart />
+          </div>
+        </div>
+        <div className="cards-box">
+          <div className="cards-title">One Hundred Years of Solitude</div>
+
+          <div className="cards-subtitle">
+            Hubert Blaine Wolfeschlegelsteinhausenbergerdorff Sr
+          </div>
+          <div className="cards-rating">
+            <ReactStars
+              count={5}
+              onChange={ratingChanged}
+              size={21}
+              activeColor="#ffd700"
+            />
+          </div>
+
+          <div className="btn-main">
+            <Link>add to cart</Link>
+          </div>
+        </div>
+      </div>  */}
+      </section>
     </div>
   );
 };
