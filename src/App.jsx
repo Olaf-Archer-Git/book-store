@@ -5,6 +5,7 @@ import Layout from "./components/layout/Layout";
 import Blog from "./pages/blog/Blog.jsx";
 import Contact from "./pages/contact/Contact.jsx";
 import Shop from "./pages/shop/Shop.jsx";
+import Comparing from "./pages/comparing/Comparing.jsx";
 import "./style/App.scss";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route path="blog" element={<Blog />} />
             <Route path="contact" element={<Contact />} />
             <Route path="shop" element={<Shop />} />
+            <Route path="compare" element={<Comparing />} />
           </Route>
         </Routes>
       </BrowserRouter>

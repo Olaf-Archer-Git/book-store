@@ -1,1 +1,55 @@
- 
+@import "../../style/App.scss";
+@import "../../style/variables.scss";
+
+.comparing {
+  background: $grey-light;
+
+  &-container {
+    background: $white;
+    box-shadow: 2px 2px 10px $brown;
+    position: relative;
+    border-radius: 5px;
+
+    & svg {
+      position: absolute;
+      top: 2%;
+      right: 2%;
+      font-size: 21px;
+      color: $blue;
+      cursor: pointer;
+      transition: all 0.5s;
+    }
+
+    & svg:hover {
+      color: $orange;
+    }
+  }
+
+  &-box {
+    padding: 10px;
+
+    & p {
+      margin-bottom: 10px;
+      font-size: 15px;
+      font-weight: bold;
+      text-transform: capitalize;
+      border-bottom: 1px solid $green-light;
+    }
+  }
+
+  &-text {
+    display: flex;
+    justify-content: space-between;
+
+    & span {
+      color: $blue;
+      text-transform: lowercase;
+    }
+  }
+
+  &-price {
+    letter-spacing: 1.2px;
+    font-size: 17px;
+    font-weight: bold;
+  }
+}

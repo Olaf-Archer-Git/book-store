@@ -28,18 +28,18 @@ const HeaderMiddle = () => {
             <div className="middle-icons">
               <div className="middle-item">
                 <RiRecycleFill />
-                <Link>Compare</Link>
+                <Link to="/compare">Compare</Link>
               </div>
               <div className="middle-item">
                 <TfiHeart />
-                <Link>Favourite</Link>
+                <Link to="/wishlist">Favourite</Link>
               </div>
               <div className="middle-item">
                 <TfiUser />
-                <Link>LogIn</Link>
+                <Link to="/login">LogIn</Link>
               </div>
               <div className="middle-item">
-                <Link className="middle-cart">
+                <Link to="/cart" className="middle-cart">
                   <RiShoppingCartLine />
                 </Link>
                 <span className="middle-badge">0</span>
