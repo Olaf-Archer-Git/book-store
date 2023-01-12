@@ -5,7 +5,7 @@ import "./Header.scss";
 
 const HeaderBottom = () => {
   return (
-    <section className="header-bottom">
+    <div className="header-bottom">
       <div className="container-xxl">
         <div className="row">
           <div className="col-md-3 bottom-menu">
@@ -60,7 +60,7 @@ const HeaderBottom = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

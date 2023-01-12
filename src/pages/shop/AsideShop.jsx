@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import img1 from "../../assets/templateFour.png";
+import img1 from "../../assets/book6.png";
 import img2 from "../../assets/book3.png";
 import "./AsideShop.scss";
 

@@ -2,12 +2,12 @@ import { MdOutlineLocalShipping, MdOutlineHeadphones } from "react-icons/md";
 import { TbDiscount2 } from "react-icons/tb";
 import { AiOutlineGift, AiOutlineCreditCard } from "react-icons/ai";
 
-import img1 from "../assets/templateOne.png";
-import img2 from "../assets/templateTwo.png";
-import img3 from "../assets/templateThree.png";
-import img4 from "../assets/templateFour.png";
-import img5 from "../assets/templateFive.png";
-import img6 from "../assets/book3.png";
+import img1 from "../assets/book1.png";
+import img2 from "../assets/book2.png";
+import img3 from "../assets/book3.png";
+import img4 from "../assets/book4.png";
+import img5 from "../assets/book5.png";
+import img6 from "../assets/book6.png";
 
 export const dataBanner = [
   {

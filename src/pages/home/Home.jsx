@@ -40,10 +40,18 @@ const Home = () => {
         <div className="container-fluid">
           <h2 className="home-caption">News card</h2>
           <div className="row">
-            <NewsCard />
-            <NewsCard />
-            <NewsCard />
-            <NewsCard />
+            <div className="col-lg-3">
+              <NewsCard />
+            </div>
+            <div className="col-lg-3">
+              <NewsCard />
+            </div>
+            <div className="col-lg-3">
+              <NewsCard />
+            </div>
+            <div className="col-lg-3">
+              <NewsCard />
+            </div>
           </div>
         </div>
       </section>

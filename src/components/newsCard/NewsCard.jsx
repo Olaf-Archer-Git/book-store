@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import img1 from "../../assets/book1.png";
+import img1 from "../../assets/book2.png";
 
 import "./NewsCard.scss";
 
 const NewsCard = () => {
   return (
-    <div className="col-lg-3">
+    <>
       <div className="news-box">
         <div className="news-img">
-          <img src={img1} alt="#!" />
+          <img className="image" src={img1} alt="#!" />
         </div>
         <div>
           <p className="title">blog one</p>
@@ -19,7 +19,7 @@ const NewsCard = () => {
           <Link to="">Read More...</Link>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

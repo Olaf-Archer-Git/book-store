@@ -1,12 +1,8 @@
 @import "../../style/variables.scss";
+@import "../../style/App.scss";
 
 .home {
   background: $grey;
-  // padding: 50px 0;
-
-  & section {
-    padding: 50px 0;
-  }
 
   &-caption {
     text-align: center;
@@ -17,13 +13,8 @@
     font-size: 21px;
     color: $brown;
   }
-
-  //^^^^^not to remove/////
-  //////
-  //////
 }
 
-/////do not move//////
 .news {
   background: $white;
 }
@@ -31,4 +22,3 @@
 .banner {
   background: $white;
 }
-/////////

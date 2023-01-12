@@ -8,7 +8,7 @@
 .aside {
   &-card {
     background: $bg-white;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 10px 15px;
     margin-bottom: 20px;
     box-shadow: 1px 1px 10px $aside;
@@ -68,6 +68,7 @@
     & img {
       width: 70px;
       height: auto;
+      padding: 20px 10px;
     }
   }
 

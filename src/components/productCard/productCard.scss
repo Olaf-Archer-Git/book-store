@@ -2,26 +2,10 @@
 @import "../../style/App.scss";
 
 .cards {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 5px;
-
   &-container {
     width: 100%;
     background: $white;
-  }
-
-  &-large {
-    display: flex;
-    width: 100%;
-    background: $white;
-  }
-
-  &-middle {
-    max-width: 310px;
-    width: 100%;
-    background: $white;
+    margin: 10px 0;
   }
 
   &-wrapper {
@@ -30,12 +14,6 @@
 
   &-img {
     background: $grey;
-
-    & img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
   }
 
   &-box {
@@ -45,19 +23,10 @@
     margin: auto 0;
   }
 
-  &-title {
-    font-size: 21px;
-    font-weight: bold;
+  &-description{
     text-transform: capitalize;
-    color: $blue;
-    padding-bottom: 15px;
-    padding-left: 25px;
-  }
-
-  &-subtitle {
-    font-size: 18px;
-    color: $green;
-    padding-bottom: 20px;
+    font-size: 13px;
+    color: $blue-light;
   }
 
   &-rating {
@@ -67,16 +36,53 @@
   }
 
   &-like {
-    font-size: 25px;
+    font-size: 22px;
     cursor: pointer;
     color: $orange;
     position: absolute;
     bottom: 1%;
     left: 1%;
     padding-left: 7px;
-    background: $blue;
+    padding-bottom: 2px;
+
+    border: 2px solid $orange;
     width: 40px;
     height: 40px;
     border-radius: 50%;
   }
+}
+
+.size-12 {
+  width: 100%;
+}
+
+.size-12 .cards-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.size-12 .cards-box {
+  min-width: 50%;
+}
+
+.size-6 {
+  width: 50%;
+}
+
+.size-6 .cards-container {
+  display: flex;
+}
+
+.size-6 .cards-img {
+  height: 100%;
+}
+
+.size-6 .cards-box {
+  min-width: 50%;
+}
+
+.size-4 {
+  width: 33%;
+  padding-right: 0;
+  margin-right: 0;
 }

@@ -6,7 +6,7 @@ import "./Header.scss";
 
 const HeaderMiddle = () => {
   return (
-    <section className="header-middle">
+    <div className="header-middle">
       <div className="container-xxl">
         <div className="row">
           <div className="col-sm-3">
@@ -48,7 +48,7 @@ const HeaderMiddle = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
