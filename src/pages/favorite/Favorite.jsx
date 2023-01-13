@@ -1,23 +1,22 @@
 import React from "react";
-import { VscChromeClose } from "react-icons/vsc";
 import Meta from "../../components/meta/Meta";
 import BreadCrumbs from "../../components/breadcrumbs/BreadCrumbs";
-import img1 from "../../assets/book1.png";
+import { VscChromeClose } from "react-icons/vsc";
+import img1 from "../../assets/book6.png";
 
-import "./Comparing.scss";
+import "./Favorite.scss";
 
-const Comparing = () => {
+const Favorite = () => {
   return (
     <>
-      <Meta title={"Comparing"} />
-      <BreadCrumbs title={"Comparing"} />
-
-      <section className="comparing">
+      <Meta title={"Favorite"} />
+      <BreadCrumbs title={"Favorite"} />
+      <section className="favorite">
         <div className="container-xxl">
           <div className="row">
             <div className="col-lg-3">
-              <div className="comparing-container">
-                <div className="comparing-img">
+              <div className="favorite-container">
+                <div className="favorite-img">
                   <img className="image" src={img1} alt="#!" />
                 </div>
                 <VscChromeClose />
@@ -31,10 +30,6 @@ const Comparing = () => {
                   <p className="comparing-text">
                     Availability: <span> in stock</span>
                   </p>
-
-                  <p className="comparing-text">
-                    size: <span>m l xl </span>
-                  </p>
                 </div>
               </div>
             </div>
@@ -45,4 +40,4 @@ const Comparing = () => {
   );
 };
 
-export default Comparing;
+export default Favorite;

@@ -1,0 +1,57 @@
+@import "../../style/App.scss";
+@import "../../style/variables.scss";
+
+.login {
+  background: $grey;
+  padding: 100px 0;
+
+  &-container {
+    border-radius: 5px;
+    padding: 25px;
+    box-shadow: 2px 2px 10px $blue;
+  }
+
+  & h3 {
+    text-align: center;
+    color: $brown;
+  }
+
+  &-prompt{
+    padding:0 5px;
+
+    & a{
+      color: $brown;
+      transition: all 0.5s;  
+    }
+
+    & a:hover{
+        color: $white;  
+      }
+    
+  }
+}
+
+.form-box {
+  padding: 25px 0 5px 0;
+
+  & input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 7px 10px;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid $brown;
+    font-size: 17px;
+    text-transform: capitalize;
+  }
+
+  & input::placeholder{
+    color: $blue;
+  }
+}
+
+.button{
+    padding: 25px 0 !important;
+    display: flex;
+    justify-content: space-around;
+}

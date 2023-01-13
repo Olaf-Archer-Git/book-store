@@ -1,0 +1,27 @@
+@import "../../style/App.scss";
+@import "../../style/variables.scss";
+
+.favorite {
+  background: $green-light;
+
+  &-container {
+    background: $grey-light;
+    box-shadow: 2px 2px 10px $blue-light;
+    position: relative;
+    border-radius: 5px;
+
+    & svg {
+      position: absolute;
+      top: 2%;
+      right: 2%;
+      font-size: 21px;
+      color: $blue;
+      cursor: pointer;
+      transition: all 0.5s;
+    }
+
+    & svg:hover {
+      color: $orange;
+    }
+  }
+}

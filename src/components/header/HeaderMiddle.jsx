@@ -32,7 +32,7 @@ const HeaderMiddle = () => {
               </div>
               <div className="middle-item">
                 <TfiHeart />
-                <Link to="/wishlist">Favourite</Link>
+                <Link to="/favorite">favorite</Link>
               </div>
               <div className="middle-item">
                 <TfiUser />
