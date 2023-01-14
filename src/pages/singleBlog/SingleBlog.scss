@@ -36,7 +36,6 @@
   position: relative;
   cursor: pointer;
   display: inline-block;
-  transition: all 0.5s;
 
   & svg {
     margin-right: 5px;
@@ -49,6 +48,7 @@
   & svg,
   & span {
     color: $blue-light;
+    transition: all 0.5s;
   }
 }
 

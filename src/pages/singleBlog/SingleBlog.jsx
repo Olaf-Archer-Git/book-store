@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Meta from "../../components/meta/Meta";
 import BreadCrumbs from "../../components/breadcrumbs/BreadCrumbs";
 import img1 from "../../assets/grid-bg4.jpg";
@@ -15,7 +15,6 @@ import "./SingleBlog.scss";
 import SingleForm from "./SingleForm";
 
 const SingleBlog = () => {
-  const navigate = useNavigate();
   return (
     <>
       <Meta title={"blog item"} />
@@ -68,15 +67,10 @@ const SingleBlog = () => {
                 </div>
 
                 <div className="single-social">
-                  <div
-                    className="single-btn"
-                    onClick={() => {
-                      navigate("/blog");
-                    }}
-                  >
+                  <Link to="/blog" className="single-btn">
                     <FaArrowLeft />
                     <span className="single-link">go back</span>
-                  </div>
+                  </Link>
                   <div className="bottom-social single-links">
                     <Link className="bottom-social-item">
                       <AiOutlineYoutube />
