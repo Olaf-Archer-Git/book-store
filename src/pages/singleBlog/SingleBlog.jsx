@@ -12,6 +12,7 @@ import {
 } from "react-icons/ai";
 
 import "./SingleBlog.scss";
+import SingleForm from "./SingleForm";
 
 const SingleBlog = () => {
   const navigate = useNavigate();
@@ -62,13 +63,7 @@ const SingleBlog = () => {
                   </div>
                   <p className="single-subtext">
                     Author's Name
-                    <span>
-                      {new Date().getDate() +
-                        "." +
-                        (new Date().getMonth() + 1) +
-                        "." +
-                        new Date().getFullYear()}
-                    </span>
+                    <span>10.01.2023</span>
                   </p>
                 </div>
 
@@ -98,6 +93,7 @@ const SingleBlog = () => {
                   </div>
                 </div>
               </div>
+              <SingleForm />
             </div>
           </div>
         </div>
