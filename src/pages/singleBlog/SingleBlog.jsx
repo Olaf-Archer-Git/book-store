@@ -1,12 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Meta from "../../components/meta/Meta";
 import BreadCrumbs from "../../components/breadcrumbs/BreadCrumbs";
 import img1 from "../../assets/grid-bg4.jpg";
+import { FaArrowLeft } from "react-icons/fa";
 
 import "./SingleBlog.scss";
 
 const SingleBlog = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Meta title={"blog item"} />
@@ -52,9 +54,15 @@ const SingleBlog = () => {
                     rem commodi accusantium corrupti, dignissimos harum ad
                     voluptate aut ullam earum mollitia minus.
                   </div>
-                  <div className="single-btn">
-                    <Link className="single-link">go back</Link>
-                  </div>
+                </div>
+                <div
+                  className="single-btn"
+                  onClick={() => {
+                    navigate("/");
+                  }}
+                >
+                  <FaArrowLeft />
+                  <span className="single-link">go back</span>
                 </div>
               </div>
             </div>

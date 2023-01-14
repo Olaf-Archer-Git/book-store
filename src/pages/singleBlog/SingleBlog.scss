@@ -20,9 +20,20 @@
     padding: 5px;
   }
 }
+.single-btn {
+  padding-top: 20px;
+  margin-left: 0px;
+  position: relative;
+  cursor: pointer;
+
+  & svg {
+    margin-right: 10px;
+    margin-bottom: 3px;
+    color: $blue;
+  }
+}
 
 .single-link {
   color: $blue;
   text-transform: uppercase;
-  padding-top: 20px;
 }
