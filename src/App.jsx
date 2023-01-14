@@ -10,9 +10,9 @@ import Favorite from "./pages/favorite/Favorite.jsx";
 import Login from "./pages/login/Login.jsx";
 import ForgotPass from "./pages/forgotPass/ForgotPass.jsx";
 import Registration from "./pages/registration/Registration.jsx";
+import ResetPass from "./pages/resetPass/ResetPass.jsx";
 
 import "./style/App.scss";
-
 
 function App() {
   return (
@@ -28,6 +28,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="registration" element={<Registration />} />
           <Route path="forgot-password" element={<ForgotPass />} />
+          <Route path="reset-password" element={<ResetPass />} />
         </Route>
       </Routes>
     </BrowserRouter>
