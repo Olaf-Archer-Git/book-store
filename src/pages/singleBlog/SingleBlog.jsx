@@ -41,6 +41,21 @@ const SingleBlog = () => {
                 <div className="single-img">
                   <img src={img1} alt="#!" />
                 </div>
+                <div className="single-box">
+                  <div className="single-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Magnam quis hic, quia deserunt modi quisquam tenetur,
+                    distinctio rem commodi accusantium corrupti, dignissimos
+                    harum ad voluptate aut ullam earum mollitia minus. Lorem
+                    ipsum dolor sit amet, consectetur adipisicing elit. Magnam
+                    quis hic, quia deserunt modi quisquam tenetur, distinctio
+                    rem commodi accusantium corrupti, dignissimos harum ad
+                    voluptate aut ullam earum mollitia minus.
+                  </div>
+                  <div className="single-btn">
+                    <Link className="single-link">go back</Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
