@@ -1,21 +1,33 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Meta from "../../components/meta/Meta";
 import BreadCrumbs from "../../components/breadcrumbs/BreadCrumbs";
-import "./Login.scss";
-
-const Login = () => {
+import { Link } from "react-router-dom";
+const Registration = () => {
   return (
     <>
-      <Meta title={"Login"} />
-      <BreadCrumbs title={"Login"} />
+      <Meta title={"Registration"} />
+      <BreadCrumbs title={"Registration"} />
       <section className="login">
         <div className="container-xl">
           <div className="col-md-5 mx-auto">
             <div className="login-container">
-              <h3>Login</h3>
+              <h3>Registration</h3>
               <div className="form-box">
                 <form action="">
+                  <div>
+                    <input
+                      type="text"
+                      className="form-text"
+                      placeholder="First Name"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      className="form-text"
+                      placeholder="Last Name"
+                    />
+                  </div>
                   <div>
                     <input
                       type="text"
@@ -32,13 +44,9 @@ const Login = () => {
                   </div>
                 </form>
               </div>
-              <div className="login-prompt">
-                <Link to="/forgot-password">Forgot The Password ?</Link>
-              </div>
+
               <div className="btn-main button">
-                <button type="submit" className="login-btn">Login</button>
-                {/* <Link>Sign In</Link> */}
-                <Link to="/registration">Sign Up</Link>
+                <Link>Create</Link>
               </div>
             </div>
           </div>
@@ -48,4 +56,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Registration;

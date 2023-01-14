@@ -16,18 +16,32 @@
     color: $brown;
   }
 
-  &-prompt{
-    padding:0 5px;
+  &-prompt {
+    padding: 0 5px;
 
-    & a{
-      color: $brown;
-      transition: all 0.5s;  
+    & a {
+      color: $blue;
+      transition: all 0.5s;
     }
 
-    & a:hover{
-        color: $white;  
-      }
-    
+    & a:hover {
+      color: $white;
+    }
+  }
+
+  &-btn{
+    outline: none;
+    border: 2px solid $brown ;
+    border-radius: 5px;
+    color: $brown;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    background: transparent;
+    transition: all 0.5s;
+  }
+  &-btn:hover{
+    color: $white;
+    background: $brown;
   }
 }
 
@@ -45,13 +59,17 @@
     text-transform: capitalize;
   }
 
-  & input::placeholder{
+  & input::placeholder {
     color: $blue;
   }
 }
 
-.button{
-    padding: 25px 0 !important;
-    display: flex;
-    justify-content: space-around;
+.button {
+  padding: 25px 0 !important ;
+  display: flex;
+  justify-content: space-evenly;
+
+  & a {
+    margin-left: 10px;
+  }
 }

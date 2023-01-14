@@ -8,6 +8,8 @@ import Shop from "./pages/shop/Shop.jsx";
 import Comparing from "./pages/comparing/Comparing.jsx";
 import Favorite from "./pages/favorite/Favorite.jsx";
 import Login from "./pages/login/Login.jsx";
+import ForgotPass from "./pages/forgotPass/ForgotPass.jsx";
+import Registration from "./pages/registration/Registration.jsx";
 
 import "./style/App.scss";
 
@@ -23,7 +25,9 @@ function App() {
           <Route path="shop" element={<Shop />} />
           <Route path="compare" element={<Comparing />} />
           <Route path="favorite" element={<Favorite />} />
-          <Route path="login" element={<Login/>} />
+          <Route path="login" element={<Login />} />
+          <Route path="registration" element={<Registration />} />
+          <Route path="forgot-password" element={<ForgotPass />} />
         </Route>
       </Routes>
     </BrowserRouter>
