@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import img1 from "../../assets/book2.png";
+import img1 from "../../assets/book5.png";
 
 import "./NewsCard.scss";
 
@@ -16,7 +16,7 @@ const NewsCard = () => {
           <p className="subtitle">Molestiae, dolorem vel temporibus?</p>
         </div>
         <div className="btn-main">
-          <Link to="">Read More...</Link>
+          <Link to="/blog/:id">Read More...</Link>
         </div>
       </div>
     </>

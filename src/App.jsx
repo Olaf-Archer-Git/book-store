@@ -11,6 +11,7 @@ import Login from "./pages/login/Login.jsx";
 import ForgotPass from "./pages/forgotPass/ForgotPass.jsx";
 import Registration from "./pages/registration/Registration.jsx";
 import ResetPass from "./pages/resetPass/ResetPass.jsx";
+import SingleBlog from "./pages/singleBlog/SingleBlog.jsx";
 
 import "./style/App.scss";
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="blog" element={<Blog />} />
+          <Route path="blog/:id" element={<SingleBlog />} />
           <Route path="contact" element={<Contact />} />
           <Route path="shop" element={<Shop />} />
           <Route path="compare" element={<Comparing />} />
