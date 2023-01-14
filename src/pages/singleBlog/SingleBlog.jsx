@@ -58,7 +58,7 @@ const SingleBlog = () => {
                 <div
                   className="single-btn"
                   onClick={() => {
-                    navigate("/");
+                    navigate("/blog");
                   }}
                 >
                   <FaArrowLeft />
