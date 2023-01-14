@@ -4,6 +4,12 @@ import Meta from "../../components/meta/Meta";
 import BreadCrumbs from "../../components/breadcrumbs/BreadCrumbs";
 import img1 from "../../assets/grid-bg4.jpg";
 import { FaArrowLeft } from "react-icons/fa";
+import {
+  AiOutlineYoutube,
+  AiOutlineFacebook,
+  AiOutlineTwitter,
+  AiOutlineInstagram,
+} from "react-icons/ai";
 
 import "./SingleBlog.scss";
 
@@ -54,15 +60,42 @@ const SingleBlog = () => {
                     rem commodi accusantium corrupti, dignissimos harum ad
                     voluptate aut ullam earum mollitia minus.
                   </div>
+                  <p className="single-subtext">
+                    Author's Name
+                    <span>
+                      {new Date().getDate() +
+                        "." +
+                        (new Date().getMonth() + 1) +
+                        "." +
+                        new Date().getFullYear()}
+                    </span>
+                  </p>
                 </div>
-                <div
-                  className="single-btn"
-                  onClick={() => {
-                    navigate("/blog");
-                  }}
-                >
-                  <FaArrowLeft />
-                  <span className="single-link">go back</span>
+
+                <div className="single-social">
+                  <div
+                    className="single-btn"
+                    onClick={() => {
+                      navigate("/blog");
+                    }}
+                  >
+                    <FaArrowLeft />
+                    <span className="single-link">go back</span>
+                  </div>
+                  <div className="bottom-social single-links">
+                    <Link className="bottom-social-item">
+                      <AiOutlineYoutube />
+                    </Link>
+                    <Link className="bottom-social-item">
+                      <AiOutlineFacebook />
+                    </Link>
+                    <Link className="bottom-social-item">
+                      <AiOutlineTwitter />
+                    </Link>
+                    <Link className="bottom-social-item">
+                      <AiOutlineInstagram />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

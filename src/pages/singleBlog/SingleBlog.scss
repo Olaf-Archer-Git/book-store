@@ -13,27 +13,64 @@
 .single-img {
   background: $green;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 
   & img {
     width: 100%;
     padding: 5px;
   }
 }
+
+.single-subtext {
+  padding-top: 10px;
+  color: $blue-light;
+
+  & span {
+    margin-left: 10px;
+  }
+}
+
 .single-btn {
-  padding-top: 20px;
+  padding-top: 10px;
   margin-left: 0px;
   position: relative;
   cursor: pointer;
+  display: inline-block;
+  transition: all 0.5s;
 
   & svg {
-    margin-right: 10px;
-    margin-bottom: 3px;
+    margin-right: 5px;
+    margin-bottom: 4px;
     color: $blue;
+  }
+}
+
+.single-btn:hover {
+  & svg,
+  & span {
+    color: $blue-light;
   }
 }
 
 .single-link {
   color: $blue;
   text-transform: uppercase;
+}
+
+.single-social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.single-links {
+  & svg {
+    color: $blue;
+    font-size: 21px;
+    transition: all 0.5s;
+  }
+
+  & svg:hover {
+    color: $blue-light;
+  }
 }
