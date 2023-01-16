@@ -37,9 +37,15 @@ const MainProduct = () => {
               <div className="main-box">
                 <p className="title">Author's name</p>
                 <p className="title">Book's name</p>
-                <p>price: <span className="price">100$</span></p>
-                <p>categories: <span>detective, adventures</span></p>
-                <p>size: <span>xl</span></p>
+                <p>
+                  price: <span className="price">100$</span>
+                </p>
+                <p>
+                  categories: <span>detective, adventures</span>
+                </p>
+                <p>
+                  size: <span>xl</span>
+                </p>
                 <ReactStars
                   count={5}
                   onChange={ratingChanged}
@@ -47,8 +53,11 @@ const MainProduct = () => {
                   activeColor="#ffd700"
                 />
 
+                <p>
+                  availability: <span>in stock</span>
+                </p>
+
                 <Link to="/refund-policy">refound policy</Link>
-                
               </div>
             </div>
           </div>
