@@ -5,11 +5,9 @@
   background: white;
 }
 
-
-
 .main {
   &-img {
-    background: white;
+    background: $grey-light;
     border-radius: 5px;
     width: 100%;
   }
@@ -25,6 +23,6 @@
   }
 }
 
-.main-box{
+.main-box {
   margin: 10px;
 }
