@@ -12,8 +12,16 @@ import ForgotPass from "./pages/forgotPass/ForgotPass.jsx";
 import Registration from "./pages/registration/Registration.jsx";
 import ResetPass from "./pages/resetPass/ResetPass.jsx";
 import SingleBlog from "./pages/singleBlog/SingleBlog.jsx";
+import PrivacyPolicy from "./pages/privacyPolicy/PrivacyPolicy.jsx";
+import RefundPolicy from "./pages/refundPolicy/RefundPolicy.jsx";
+import Shopping from "./pages/shopping/Shopping.jsx";
+import MainProduct from "./pages/mainProduct/MainProduct.jsx";
 
 import "./style/App.scss";
+
+
+
+
 
 function App() {
   return (
@@ -25,12 +33,16 @@ function App() {
           <Route path="blog/:id" element={<SingleBlog />} />
           <Route path="contact" element={<Contact />} />
           <Route path="shop" element={<Shop />} />
+          <Route path="shop/:id" element={<MainProduct/>} />
           <Route path="compare" element={<Comparing />} />
           <Route path="favorite" element={<Favorite />} />
           <Route path="login" element={<Login />} />
           <Route path="registration" element={<Registration />} />
           <Route path="forgot-password" element={<ForgotPass />} />
           <Route path="reset-password" element={<ResetPass />} />
+          <Route path="privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="refund-policy" element={<RefundPolicy />} />
+          <Route path="shopping" element={<Shopping/>} />
         </Route>
       </Routes>
     </BrowserRouter>

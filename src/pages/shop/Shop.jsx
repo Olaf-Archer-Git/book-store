@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import BreadCrumbs from "../../components/breadcrumbs/BreadCrumbs";
 import Meta from "../../components/meta/Meta";
-import {TfiLayoutColumn2, TfiLayoutGrid2, TfiLayoutGrid3 } from "react-icons/tfi";
+import {
+  TfiLayoutColumn2,
+  TfiLayoutGrid2,
+  TfiLayoutGrid3,
+} from "react-icons/tfi";
 import AsideShop from "./AsideShop.jsx";
 import ProductCard from "../../components/productCard/ProductCard";
 
@@ -54,8 +58,9 @@ const Shop = () => {
                 </div>
               </div>
               <div className="shop-list">
-                <div className="row"><ProductCard sortLayout={sortLayout} /></div>
-                
+                <div className="row">
+                  <ProductCard sortLayout={sortLayout} />
+                </div>
               </div>
             </div>
           </div>

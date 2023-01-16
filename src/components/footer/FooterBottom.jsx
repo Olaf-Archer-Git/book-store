@@ -42,11 +42,11 @@ const FooterBottom = () => {
           <div className="col-md-3">
             <ul className="bottom-items">
               <h3>Information</h3>
-              <li>Private</li>
-              <li>Refound</li>
-              <li>Shopping</li>
-              <li>Term Delivery</li>
-              <li>Blog5</li>
+              <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+              <li><Link to="/refund-policy">Refund Policy</Link></li>
+              <li><Link to="/shopping">Shopping</Link></li>
+              <li><Link to="/blog">Blog</Link></li>
+              
             </ul>
           </div>
           <div className="col-md-3">

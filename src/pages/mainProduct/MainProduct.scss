@@ -1,0 +1,30 @@
+@import "../../style/App.scss";
+@import "../../style/variables.scss";
+
+.main-product {
+  background: white;
+}
+
+
+
+.main {
+  &-img {
+    background: white;
+    border-radius: 5px;
+    width: 100%;
+  }
+}
+
+.main-inner {
+  border: 2px solid $grey;
+  border-radius: 5px;
+  margin: 20px;
+
+  & div {
+    padding: 20px;
+  }
+}
+
+.main-box{
+  margin: 10px;
+}

@@ -82,7 +82,12 @@
   & li {
     padding: 5px 0;
   }
+
+  & a {
+    color: $white;
+  }
 }
+
 .bottom-social-item {
   color: $color-light;
   font-size: 30px;

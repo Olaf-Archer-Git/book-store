@@ -1,0 +1,12 @@
+@import "../../style/App.scss";
+@import "../../style/variables.scss";
+
+.policy {
+  background: $green-light;
+  &-container {
+    background: $white;
+    padding: 25px 15px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 11px $blue;
+  }
+}
