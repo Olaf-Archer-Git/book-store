@@ -26,8 +26,8 @@ const MainProduct = () => {
                   <Zoom
                     img={img1}
                     zoomScale={1.5}
-                    width={450}
-                    height={450}
+                    width={300}
+                    height={350}
                     transitionTime={0.3}
                   />
                 </div>
@@ -35,8 +35,8 @@ const MainProduct = () => {
             </div>
             <div className="col-lg-6">
               <div className="main-box">
-                <p className="title">Author's name</p>
-                <p className="title">Book's name</p>
+                <h3>Author's name</h3>
+                <h3>Book's name</h3>
                 <p>
                   price: <span className="price">100$</span>
                 </p>
@@ -56,6 +56,7 @@ const MainProduct = () => {
                 <p>
                   availability: <span>in stock</span>
                 </p>
+                <div className="button-block"></div>
 
                 <Link to="/refund-policy">refound policy</Link>
               </div>
