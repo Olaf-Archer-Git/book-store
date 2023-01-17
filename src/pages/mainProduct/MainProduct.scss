@@ -1,49 +1,22 @@
 @import "../../style/App.scss";
 @import "../../style/variables.scss";
 
-.main-product {
-  background: white;
-}
+.product {
+  background: $white;
 
-.main {
-  &-img {
-    background: $grey-light;
-    border-radius: 5px;
-    width: 100%;
-  }
-}
-
-.main-inner {
-  border: 2px solid $grey;
-  border-radius: 5px;
-  margin: 20px;
-
-  & div {
-    padding: 20px;
-  }
-}
-
-.main-box {
-  margin: 0 10px;
-
-  & h3 {
-    font-size: 21px;
-    color: $blue;
-    border-bottom: 2px solid $grey;
-    padding-bottom: 10px;
-    text-transform: capitalize;
-  }
-
-  & p {
-    font-size: 18px;
-    text-transform: capitalize;
+  &-container {
+    background: #fff;
     display: flex;
-    justify-content: space-between;
-    color: $blue;
-    // margin-top: 20px;
+    justify-content: start;
+    align-items: center;
+
+    border-radius: 5px;
   }
 
-  & span {
-    font-weight: bold;
+  &-img {
+    padding: 10px;
+    border: 2px solid $grey;
+    border-radius: 5px;
+    margin: 20px;
   }
 }

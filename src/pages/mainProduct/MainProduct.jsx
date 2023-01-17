@@ -17,12 +17,12 @@ const MainProduct = () => {
     <div>
       <Meta title={"Product Name"} />
       <BreadCrumbs title={"Product Name"} />
-      <section className="main-product">
+      <section className="product">
         <div className="conatiner-xxl">
           <div className="row mx-2">
             <div className="col-lg-6">
-              <div className="main-img">
-                <div className="main-inner">
+              <div className="product-container">
+                <div className="product-img">
                   <Zoom
                     img={img1}
                     zoomScale={1.5}
@@ -31,34 +31,32 @@ const MainProduct = () => {
                     transitionTime={0.3}
                   />
                 </div>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="main-box">
-                <h3>Author's name</h3>
-                <h3>Book's name</h3>
-                <p>
-                  price: <span className="price">100$</span>
-                </p>
-                <p>
-                  categories: <span>detective, adventures</span>
-                </p>
-                <p>
-                  size: <span>xl</span>
-                </p>
-                <ReactStars
-                  count={5}
-                  onChange={ratingChanged}
-                  size={21}
-                  activeColor="#ffd700"
-                />
+                <div className="product-box">
+                  <h3>Author's name</h3>
+                  <h3>Book's name</h3>
+                  <p>
+                    price: <span className="price">100$</span>
+                  </p>
+                  <p>
+                    categories: <span>detective, adventures</span>
+                  </p>
+                  <p>
+                    size: <span>xl</span>
+                  </p>
+                  <ReactStars
+                    count={5}
+                    onChange={ratingChanged}
+                    size={21}
+                    activeColor="#ffd700"
+                  />
 
-                <p>
-                  availability: <span>in stock</span>
-                </p>
-                <div className="button-block"></div>
+                  <p>
+                    availability: <span>in stock</span>
+                  </p>
+                  <div className="button-block"></div>
 
-                <Link to="/refund-policy">refound policy</Link>
+                  <Link to="/refund-policy">refound policy</Link>
+                </div>
               </div>
             </div>
           </div>
