@@ -39,7 +39,7 @@ const HeaderMiddle = () => {
                 <Link to="/login">LogIn</Link>
               </div>
               <div className="middle-item">
-                <Link to="/cart" className="middle-cart">
+                <Link to="/cart" title="Product Cart" className="middle-cart">
                   <RiShoppingCartLine />
                 </Link>
                 <span className="middle-badge">0</span>

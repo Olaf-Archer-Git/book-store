@@ -16,12 +16,9 @@ import PrivacyPolicy from "./pages/privacyPolicy/PrivacyPolicy.jsx";
 import RefundPolicy from "./pages/refundPolicy/RefundPolicy.jsx";
 import Shopping from "./pages/shopping/Shopping.jsx";
 import MainProduct from "./pages/mainProduct/MainProduct.jsx";
+import Cart from "./pages/cart/Cart.jsx";
 
 import "./style/App.scss";
-
-
-
-
 
 function App() {
   return (
@@ -33,7 +30,7 @@ function App() {
           <Route path="blog/:id" element={<SingleBlog />} />
           <Route path="contact" element={<Contact />} />
           <Route path="shop" element={<Shop />} />
-          <Route path="shop/:id" element={<MainProduct/>} />
+          <Route path="shop/:id" element={<MainProduct />} />
           <Route path="compare" element={<Comparing />} />
           <Route path="favorite" element={<Favorite />} />
           <Route path="login" element={<Login />} />
@@ -42,7 +39,8 @@ function App() {
           <Route path="reset-password" element={<ResetPass />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="refund-policy" element={<RefundPolicy />} />
-          <Route path="shopping" element={<Shopping/>} />
+          <Route path="shopping" element={<Shopping />} />
+          <Route path="cart" element={<Cart />} />
         </Route>
       </Routes>
     </BrowserRouter>
