@@ -27,7 +27,7 @@
       font-size: 21px;
       color: $blue;
       text-transform: capitalize;
-      border-bottom: 2px solid $grey;
+      border-bottom: 1px solid $grey;
       padding-bottom: 5px;
       font-weight: bold;
     }
@@ -46,6 +46,12 @@
       text-transform: lowercase;
     }
   }
+
+  &-review {
+    display: flex;
+    justify-content: start;
+    border-bottom: 1px solid $grey;
+  }
 }
 
 .product-box .price {
@@ -55,6 +61,78 @@
 .product-box .price {
   & span {
     font-weight: bold;
+  }
+}
+
+.button-block {
+  margin: 30px 0 20px;
+
+  & span {
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: $blue;
+  }
+}
+
+.block-input {
+  width: 50px;
+  border: 2px solid $blue;
+  border-radius: 5px;
+  outline: none;
+  color: $blue;
+  padding-left: 5px;
+  font-size: 17px;
+  margin: 0 25px 0 5px;
+}
+
+.product-btn {
+  outline: none;
+  padding: 5px 12px;
+  border: 2px solid $blue;
+  transition: all 0.5s;
+  text-transform: capitalize;
+  font-size: 15px;
+  background: $blue;
+  color: $white;
+  border-radius: 5px;
+  margin: 25px 10px 10px 0;
+}
+
+.product-btn:hover {
+  background: $white;
+  color: $blue;
+}
+
+.links-block {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+
+  & a {
+    margin-right: 20px;
+  }
+
+  & svg {
+    margin-bottom: 5px;
+  }
+
+  & a,
+  & svg {
+    color: $green;
+    font-size: 20px;
+  }
+}
+
+.share {
+  margin-left: 30px;
+  color: $orange;
+  font-size: 16px;
+
+  & svg {
+    margin-right: 3px;
+    font-size: 25px;
+    margin-bottom: 3px;
   }
 }
 
