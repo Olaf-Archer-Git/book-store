@@ -20,7 +20,7 @@ const MainProduct = () => {
       <section className="product">
         <div className="conatiner-xxl">
           <div className="row mx-2">
-            <div className="col-lg-6">
+            <div className="col-lg-9 mx-auto">
               <div className="product-container">
                 <div className="product-img">
                   <Zoom
@@ -34,14 +34,18 @@ const MainProduct = () => {
                 <div className="product-box">
                   <h3>Author's name</h3>
                   <h3>Book's name</h3>
-                  <p>
-                    price: <span className="price">100$</span>
+                  <p className="price">
+                    price: <span>100$</span>
                   </p>
                   <p>
-                    categories: <span>detective, adventures</span>
+                    categories:
+                    <span>&nbsp;detective</span>
                   </p>
                   <p>
                     size: <span>xl</span>
+                  </p>
+                  <p>
+                    availability: <span>in stock</span>
                   </p>
                   <ReactStars
                     count={5}
@@ -49,10 +53,6 @@ const MainProduct = () => {
                     size={21}
                     activeColor="#ffd700"
                   />
-
-                  <p>
-                    availability: <span>in stock</span>
-                  </p>
                   <div className="button-block"></div>
 
                   <Link to="/refund-policy">refound policy</Link>
