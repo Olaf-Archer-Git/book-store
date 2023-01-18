@@ -13,10 +13,12 @@ const Cart = () => {
         <div className="container-xxl">
           <div className="row">
             <div className="col-md-12">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur
-              ex cum soluta distinctio harum, aperiam adipisci, possimus
-              consequatur debitis eaque similique, sapiente nulla. In velit
-              repellendus aspernatur. Eum, optio veritatis?
+              <div className="cart-container">
+                <div className="cart-product">product</div>
+                <div className="cart-price">price</div>
+                <div className="cart-quantity">quantity</div>
+                <div className="cart-total">total</div>
+              </div>
             </div>
           </div>
         </div>

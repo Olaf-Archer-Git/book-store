@@ -4,4 +4,9 @@
 .cart {
   background: $orange;
   color: $white;
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+  }
 }
