@@ -2,7 +2,7 @@ import React from "react";
 import ReactStars from "react-rating-stars-component";
 import { Link } from "react-router-dom";
 
-import img1 from "../../assets/book5.png";
+import img1 from "../../assets/book3.png";
 import "./SpecialCard.scss";
 
 const SpecialCard = ({ sortLayout }) => {

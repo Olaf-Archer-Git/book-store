@@ -18,7 +18,7 @@ const MainProduct = () => {
   const link = window.location.href;
 
   return (
-    <div>
+    <>
       <Meta title={"Product Name"} />
       <BreadCrumbs title={"Product Name"} />
       <section className="product">
@@ -72,14 +72,12 @@ const MainProduct = () => {
                     />
                   </div>
 
-                  .
                   <button type="button" className="product-btn ">
                     buy now
                   </button>
                   <button type="button" className="product-btn">
                     add to card
                   </button>
-
                   <div className="links-block">
                     <div className="middle-item">
                       <RiRecycleFill />
@@ -90,7 +88,6 @@ const MainProduct = () => {
                       <Link to="/favorite">favorite</Link>
                     </div>
                   </div>
-
                   <div className="product-links">
                     <Link
                       to="/refund-policy"
@@ -116,7 +113,7 @@ const MainProduct = () => {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

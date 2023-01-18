@@ -77,7 +77,7 @@
   &-item {
     text-transform: capitalize;
     & a {
-      padding-left: 5px;
+      padding-left: 8px;
       color: $color-light;
     }
 
@@ -88,6 +88,7 @@
     & svg {
       color: $color-light;
       font-size: 21px;
+      margin-bottom: 5px;
     }
   }
 
