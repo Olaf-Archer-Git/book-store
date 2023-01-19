@@ -13,54 +13,52 @@ const Cart = () => {
       <BreadCrumbs title={"Product Cart"} />
       <section className="cart">
         <div className="container-xxl">
-          <div className="cart-wrapper">
-            <div className="row">
-              <div className="col-md-6">
-                <div className="cart-container">
-                  <h4>Product</h4>
+          <div className="row">
+            <div className="col-md-7">
+              <div className="cart-container">
+                <div className="cart-img">
+                  <img src={img1} alt="#!" />
+                </div>
+                <div className="cart-content">
+                  <h4 className="cart-title">lord of the rings</h4>
+                  <h4 className="cart-title">j.r.r. tolkien</h4>
+                  <TfiTrash className="cart-icon" title="REMOVE" />
                   <div className="cart-box">
-                    <div className="cart-img">
-                      <img src={img1} alt="#!" />
-                    </div>
-                    <div className="cart-content">
-                      <p>Name Of The Book</p>
-                      <p>Name Of The Author</p>
-                    </div>
+                    <p>
+                      Price:<span>$25</span>
+                    </p>
+                    <p>
+                      quantity:
+                      <input
+                        type="number"
+                        className="block-input"
+                        min={1}
+                        max={10}
+                      />
+                    </p>
+                    <p>
+                      Total:<span>$25</span>
+                    </p>
                   </div>
                 </div>
               </div>
-              <div className="col-md-2">
-                <div className="cart-container">
-                  <h4>Price</h4>
-                  <div className="cart-box">
-                    <div className="cart-content">$50</div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-2">
-                <div className="cart-container">
-                  <h4>Quantity</h4>
-                  <div className="cart-box">
-                    <input
-                      type="number"
-                      className="block-input"
-                      min={1}
-                      max={10}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-2">
-                <div className="cart-container">
-                  <h4>Total</h4>
-                  <div className="cart-box">
-                    <div className="cart-content">
-                      <TfiTrash />
-                      <span>$100</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            </div>
+
+            <div className="col-md-5">
+              <aside className="cart-aside">
+                <h4>
+                  Subtotal:<span>$100</span>
+                </h4>
+                <h4>
+                  Taxes:<span>$100</span>
+                </h4>
+                <h4>
+                  Total:<span>$100</span>
+                </h4>
+                <p>Taxes and shipping calculated at checkout</p>
+                <button className="aside-btn">Check Out</button>
+                <button className="aside-btn">Continue Shopping</button>
+              </aside>
             </div>
           </div>
         </div>

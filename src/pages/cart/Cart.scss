@@ -4,45 +4,100 @@
 .cart {
   background: $orange-light;
 
-  &-wrapper {
-    position: relative;
-  }
-
-  &-wrapper::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    border-top: 1px solid $orange;
-    top: 40px;
-  }
-
-  &-wrapper::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    border-bottom: 1px solid $orange;
-    bottom: 0;
-  }
-
-  &-box {
+  &-container {
     display: flex;
-    padding: 20px 0 10px 0;
-    margin: 10px;
+    align-items: center;
+    padding: 10px 20px;
+    background: $green-light;
+    border-radius: 5px;
+    margin: 10px 0;
   }
 
   &-img {
     & img {
-      max-width: 50%;
+      max-width: 75%;
     }
   }
 
   &-content {
-    color: $blue;
-    font-size: 17px;
     text-transform: capitalize;
+    color: $blue;
+    width: 100%;
+    position: relative;
+  }
 
+  &-icon {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    font-size: 23px;
+    color: $brown;
+    cursor: pointer;
+  }
+
+  &-title {
+    margin-bottom: 10px;
+  }
+
+  &-box {
     & p {
-      margin-bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 19px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid $green;
+    }
+
+    & span {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    & input {
+      margin: 0 0 5px 0;
     }
   }
+}
+
+.cart-aside {
+  background: $blue-light;
+  height: 100%;
+  margin: 10px 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+
+  & h4 {
+    font-size: 18px;
+    padding: 10px 0;
+    color: $brown;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & p {
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    font-size: 15px;
+    color: $green;
+  }
+}
+
+.aside-btn {
+  display: block;
+  margin: 0 5px 20px 5px;
+  padding: 5px 25px;
+  outline: none;
+  border: 2px solid $green;
+  border-radius: 5px;
+  color: $green;
+  background: $green-light;
+  font-weight: bold;
+  transition: ease-in-out 0.4s;
+}
+
+.aside-btn:hover {
+  color:$green-light;
+  background: $green ;
 }
