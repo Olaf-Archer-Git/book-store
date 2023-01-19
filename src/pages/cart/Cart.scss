@@ -4,7 +4,45 @@
 .cart {
   background: $orange-light;
 
+  &-wrapper {
+    position: relative;
+  }
+
+  &-wrapper::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-top: 1px solid $orange;
+    top: 40px;
+  }
+
+  &-wrapper::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid $orange;
+    bottom: 0;
+  }
+
   &-box {
     display: flex;
+    padding: 20px 0 10px 0;
+    margin: 10px;
+  }
+
+  &-img {
+    & img {
+      max-width: 50%;
+    }
+  }
+
+  &-content {
+    color: $blue;
+    font-size: 17px;
+    text-transform: capitalize;
+
+    & p {
+      margin-bottom: 5px;
+    }
   }
 }
