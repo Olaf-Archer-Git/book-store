@@ -2,11 +2,9 @@
 @import "../../style/variables.scss";
 
 .cart {
-  background: $orange;
-  color: $white;
+  background: $orange-light;
 
-  &-container {
+  &-box {
     display: flex;
-    justify-content: space-between;
   }
 }
