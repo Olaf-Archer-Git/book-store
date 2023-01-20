@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Meta from "../../components/meta/Meta";
 import BreadCrumbs from "../../components/breadcrumbs/BreadCrumbs";
 import img1 from "../../assets/book2.png";
@@ -14,7 +15,7 @@ const Cart = () => {
       <section className="cart">
         <div className="container-xxl">
           <div className="row">
-            <div className="col-md-7">
+            <div className="col-lg-7">
               <div className="cart-container">
                 <div className="cart-img">
                   <img src={img1} alt="#!" />
@@ -44,7 +45,7 @@ const Cart = () => {
               </div>
             </div>
 
-            <div className="col-md-5">
+            <div className="col-lg-5">
               <aside className="cart-aside">
                 <h4>
                   Subtotal:<span>$100</span>
@@ -56,8 +57,10 @@ const Cart = () => {
                   Total:<span>$100</span>
                 </h4>
                 <p>Taxes and shipping calculated at checkout</p>
-                <button className="aside-btn">Check Out</button>
-                <button className="aside-btn">Continue Shopping</button>
+                <Link to="/checkout" className="aside-btn">Check Out</Link>
+                <Link to="/shop" className="aside-btn">
+                  Continue Shopping
+                </Link>
               </aside>
             </div>
           </div>

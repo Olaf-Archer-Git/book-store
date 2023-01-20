@@ -1,0 +1,15 @@
+@import "../../style/App.scss";
+@import "../../style/variables.scss";
+
+.checkout {
+    background: $grey-light;
+  
+  margin: 0;
+  &-forms {
+    background: $green-light;
+  }
+
+  &-order {
+    background: $grey;
+  }
+}

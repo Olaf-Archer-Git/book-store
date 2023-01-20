@@ -46,7 +46,7 @@ const Registration = () => {
               </div>
 
               <div className="btn-main button">
-                <Link>Create</Link>
+                <Link>Create An Account</Link>
               </div>
             </div>
           </div>

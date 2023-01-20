@@ -81,7 +81,7 @@ const Contact = () => {
                 </div>
               </div>
               <div className="col-md-6">
-                <h3 className="title">Get iin touch with us</h3>
+                <h3 className="title">Get in touch with us</h3>
                 <div className="contact-box">
                   <div>
                     <BsHouse />

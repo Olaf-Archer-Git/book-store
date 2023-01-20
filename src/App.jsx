@@ -17,8 +17,10 @@ import RefundPolicy from "./pages/refundPolicy/RefundPolicy.jsx";
 import Shopping from "./pages/shopping/Shopping.jsx";
 import MainProduct from "./pages/mainProduct/MainProduct.jsx";
 import Cart from "./pages/cart/Cart.jsx";
+import CheckOut from "./pages/checkout/CheckOut.jsx";
 
 import "./style/App.scss";
+
 
 function App() {
   return (
@@ -41,6 +43,7 @@ function App() {
           <Route path="refund-policy" element={<RefundPolicy />} />
           <Route path="shopping" element={<Shopping />} />
           <Route path="cart" element={<Cart />} />
+          <Route path="checkout" element={<CheckOut />} />
         </Route>
       </Routes>
     </BrowserRouter>
