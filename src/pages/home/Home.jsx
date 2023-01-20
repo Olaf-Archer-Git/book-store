@@ -9,62 +9,49 @@ import Container from "../../components/container/Container.jsx";
 ////***********////
 import "./Home.scss";
 
-import "./Home.scss";
-
 const Home = () => {
   return (
     <main className="home">
       <section className="promotion">
-        <Container>
+        <Container className={"container-xxl"}>
           <h2 className="home-caption">Promotion</h2>
-          <div className="row">
-            <Promotion />
+          <Promotion />
+        </Container>
+      </section>
+      <section className="banner">
+        <Container className={"container-fluid"}>
+          <Banner />
+        </Container>
+      </section>
+      <section className="main-banner">
+        <Container className={"container-xxl"}>
+          <MainBanner />
+        </Container>
+      </section>
+      <section className="news">
+        <h2 className="home-caption">News card</h2>
+        <Container className={"container-fluid"}>
+          <div className="col-lg-3">
+            <NewsCard />
+          </div>
+          <div className="col-lg-3">
+            <NewsCard />
+          </div>
+          <div className="col-lg-3">
+            <NewsCard />
+          </div>
+          <div className="col-lg-3">
+            <NewsCard />
           </div>
         </Container>
       </section>
-
-      <section className="banner">
-        <div className="container-fluid">
-          <div className="row">
-            <Banner />
-          </div>
-        </div>
-      </section>
-      <section className="main-banner">
-        <div className="container-xxl">
-          <div className="row">
-            <MainBanner />
-          </div>
-        </div>
-      </section>
-      <section className="news">
-        <div className="container-fluid">
-          <h2 className="home-caption">News card</h2>
-          <div className="row">
-            <div className="col-lg-3">
-              <NewsCard />
-            </div>
-            <div className="col-lg-3">
-              <NewsCard />
-            </div>
-            <div className="col-lg-3">
-              <NewsCard />
-            </div>
-            <div className="col-lg-3">
-              <NewsCard />
-            </div>
-          </div>
-        </div>
-      </section>
       <section className="special">
         <h2 className="home-caption">Special Offer</h2>
-        <div className="container-xxl">
-          <div className="row">
-            <SpecialCard />
-            <SpecialCard />
-            <SpecialCard />
-          </div>
-        </div>
+        <Container className={"container-xxl"}>
+          <SpecialCard />
+          <SpecialCard />
+          <SpecialCard />
+        </Container>
       </section>
     </main>
   );
