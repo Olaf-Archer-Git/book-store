@@ -2,13 +2,14 @@ import React from "react";
 import Meta from "../../components/meta/Meta";
 import BreadCrumbs from "../../components/breadcrumbs/BreadCrumbs";
 import { Link } from "react-router-dom";
+import Container from "../../components/container/Container";
 const Registration = () => {
   return (
     <>
       <Meta title={"Registration"} />
       <BreadCrumbs title={"Registration"} />
       <section className="login">
-        <div className="container-xl">
+        <Container className="container-xl">
           <div className="col-md-5 mx-auto">
             <div className="login-container">
               <h3>Registration</h3>
@@ -50,7 +51,7 @@ const Registration = () => {
               </div>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
     </>
   );
