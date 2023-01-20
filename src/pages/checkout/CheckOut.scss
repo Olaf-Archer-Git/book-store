@@ -2,14 +2,150 @@
 @import "../../style/variables.scss";
 
 .checkout {
-    background: $grey-light;
-  
+  background: $grey-light;
+  color: $green;
   margin: 0;
+
   &-forms {
     background: $green-light;
+    padding: 20px 50px;
+    border-radius: 5px;
+
+    & h4 {
+      padding-bottom: 20px;
+    }
   }
 
-  &-order {
-    background: $grey;
+  &-breadcrumb {
+    color: $brown;
+  }
+
+  &-breadcrumb:hover {
+    color: $orange;
+  }
+
+  &-container {
+    padding: 10px 0;
+  }
+
+  &-box {
+    margin: 30px 0;
+    & h5 {
+      margin: 20px 0;
+    }
+  }
+
+  &-select {
+    padding: 5px 0 20px;
+  }
+
+  &-input {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  &-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0 10px;
+
+    & svg {
+      margin-bottom: 4px;
+      font-size: 23px;
+    }
+  }
+
+  &-link {
+    color: $brown;
+    font-size: 18px;
+  }
+
+  &-button {
+    padding: 10px 20px;
+
+    color: $white;
+    background: $brown;
+    border: 2px solid $brown;
+    border-radius: 5px;
+  }
+
+  &-button:hover {
+    color: $white;
+    background: $blue;
+    border-color: $blue;
+  }
+}
+
+.form-select {
+  max-width: 850px;
+  width: 100%;
+}
+
+.checkout-order {
+  background: $grey;
+  color: $brown;
+  height: 100%;
+  border-radius: 5px;
+  padding: 20px 50px;
+}
+
+.checkout-goods {
+  border-bottom: 2px solid $orange;
+  display: flex;
+  padding: 30px 0;
+}
+
+.checkout-img {
+  padding: 10px;
+  max-width: 30%;
+  position: relative;
+
+  & span {
+    position: absolute;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    right: 10%;
+    padding: 0 0 0 8px;
+    background: $grey-light;
+    border: 2px solid $green;
+    color: $green;
+    font-weight: bold;
+  }
+
+  & img {
+    width: 75%;
+    object-fit: cover;
+    height: auto;
+  }
+}
+
+.checkout-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  & p {
+    margin: 0;
+    width: 100%;
+    text-transform: capitalize;
+  }
+}
+
+.checkout-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2px solid $orange;
+  padding: 20px 0;
+
+  & h4,
+  & span {
+    font-size: 20px;
+    font-weight: bold;
   }
 }

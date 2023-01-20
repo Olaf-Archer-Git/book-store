@@ -3,23 +3,24 @@ import NewsCard from "../../components/newsCard/NewsCard.jsx";
 import SpecialCard from "../../components/specialCard/SpecialCard";
 import Banner from "../../components/banner/Banner";
 import MainBanner from "../../components/mainBanner/MainBanner";
+import Promotion from "../../components/promotion/Promotion.jsx";
+import Container from "../../components/container/Container.jsx";
 
 ////***********////
 import "./Home.scss";
 
 import "./Home.scss";
-import Promotion from "../../components/promotion/Promotion.jsx";
 
 const Home = () => {
   return (
     <main className="home">
       <section className="promotion">
-        <div className="container-xxl">
+        <Container>
           <h2 className="home-caption">Promotion</h2>
           <div className="row">
             <Promotion />
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className="banner">
