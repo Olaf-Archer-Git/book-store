@@ -43,51 +43,6 @@ const SingleBlog = () => {
                 </ul>
               </div>
             </div>
-            {/* <div className="col-lg-9">
-              <div className="single-container">
-                <div className="title">Dynamic Title Blog</div>
-                <div className="single-img">
-                  <img src={img1} alt="#!" />
-                </div>
-                <div className="single-box">
-                  <div className="single-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Magnam quis hic, quia deserunt modi quisquam tenetur,
-                    distinctio rem commodi accusantium corrupti, dignissimos
-                    harum ad voluptate aut ullam earum mollitia minus. Lorem
-                    ipsum dolor sit amet, consectetur adipisicing elit. Magnam
-                    quis hic, quia deserunt modi quisquam tenetur, distinctio
-                    rem commodi accusantium corrupti, dignissimos harum ad
-                    voluptate aut ullam earum mollitia minus.
-                  </div>
-                  <p className="single-subtext">
-                    Author's Name
-                    <span>10.01.2023</span>
-                  </p>
-                </div>
-                <div className="single-social">
-                  <span onClick={() => navigate(-1)} className="single-btn">
-                    <FaArrowLeft />
-                    <span className="single-link">go back</span>
-                  </span>
-                  <div className="bottom-social single-links">
-                    <Link className="bottom-social-item">
-                      <AiOutlineYoutube />
-                    </Link>
-                    <Link className="bottom-social-item">
-                      <AiOutlineFacebook />
-                    </Link>
-                    <Link className="bottom-social-item">
-                      <AiOutlineTwitter />
-                    </Link>
-                    <Link className="bottom-social-item">
-                      <AiOutlineInstagram />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <SingleForm />
-            </div> */}
           </div>
           <div className="col-lg-9">
             <div className="single-container">
