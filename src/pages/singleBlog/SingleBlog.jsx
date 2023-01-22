@@ -43,7 +43,7 @@ const SingleBlog = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-lg-9">
+            {/* <div className="col-lg-9">
               <div className="single-container">
                 <div className="title">Dynamic Title Blog</div>
                 <div className="single-img">
@@ -87,7 +87,7 @@ const SingleBlog = () => {
                 </div>
               </div>
               <SingleForm />
-            </div>
+            </div> */}
           </div>
           <div className="col-lg-9">
             <div className="single-container">
@@ -113,10 +113,10 @@ const SingleBlog = () => {
               </div>
 
               <div className="single-social">
-                <Link to="/blog" className="single-btn">
+                <div onClick={() => navigate(-1)} className="single-btn">
                   <FaArrowLeft />
                   <span className="single-link">go back</span>
-                </Link>
+                </div>
                 <div className="bottom-social single-links">
                   <Link className="bottom-social-item">
                     <AiOutlineYoutube />
