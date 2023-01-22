@@ -2,6 +2,7 @@ import React from "react";
 import Meta from "../../components/meta/Meta";
 import BreadCrumbs from "../../components/breadcrumbs/BreadCrumbs";
 import { Link } from "react-router-dom";
+import Container from "../../components/container/Container";
 
 const ResetPass = () => {
   return (
@@ -9,7 +10,7 @@ const ResetPass = () => {
       <Meta title={"Reset Password"} />
       <BreadCrumbs title={"Reset Password"} />
       <section className="login">
-        <div className="container-xl">
+        <Container className="container-xl">
           <div className="col-md-5 mx-auto">
             <div className="login-container">
               <h3>Reset Password</h3>
@@ -40,7 +41,7 @@ const ResetPass = () => {
               </div>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
     </>
   );

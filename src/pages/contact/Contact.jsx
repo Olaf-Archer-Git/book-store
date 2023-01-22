@@ -5,6 +5,7 @@ import BreadCrumbs from "../../components/breadcrumbs/BreadCrumbs";
 import { BsHouse, BsTelephone, BsEnvelope, BsInfoCircle } from "react-icons/bs";
 
 import "./Contact.scss";
+import Container from "../../components/container/Container";
 
 const Contact = () => {
   return (
@@ -12,9 +13,8 @@ const Contact = () => {
       <Meta title={"Contact"} />
       <BreadCrumbs title={"Contact"} />
       <section className="contact">
-        <div className="container-xxl">
-          <div className="row">
-            <div className="col-lg-12"></div>
+        <Container className="container-xxl">
+          <div className="col-lg-12">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d1536.2743709749714!2d-97.06636553621361!3d36.74282797890616!2m2!1f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b0f5349a3fa457%3A0xcef42936b02358ae!2sShirlee%20Ave%2C%20Ponca%20City%2C%20OK%2C%20USA!5e1!3m2!1sen!2sua!4v1673547461256!5m2!1sen!2sua"
               width="750"
@@ -103,7 +103,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
     </>
   );
