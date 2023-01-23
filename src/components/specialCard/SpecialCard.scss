@@ -2,7 +2,7 @@
 
 .special {
   &-wrapper {
-    background: $bg-white;
+    background: $white;
     border-radius: 10px;
     margin: 10px;
   }
@@ -42,7 +42,7 @@
     }
 
     & span {
-      color: $bg-grey;
+      color: $grey-dark;
       text-transform: capitalize;
       font-weight: normal;
     }
@@ -56,7 +56,7 @@
       background: red;
       border-radius: 50%;
       padding: 0 8px;
-      color: $bg-white;
+      color: $white;
     }
   }
 
@@ -66,7 +66,7 @@
     & a {
       padding: 5px 15px;
       background: #000;
-      color: $bg-white;
+      color: $white;
       border: 2px solid #000;
       text-transform: lowercase;
       border-radius: 25px;
@@ -74,7 +74,7 @@
 
     & a:hover {
       border: 2px solid #000;
-      background: $bg-white;
+      background: $white;
       color: #000;
     }
   }

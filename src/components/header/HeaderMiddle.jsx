@@ -9,10 +9,10 @@ const HeaderMiddle = () => {
     <div className="header-middle">
       <div className="container-xxl">
         <div className="row">
-          <div className="col-sm-3">
+          <div className="col-sm-2">
             <h2 className="middle-logo">Book Store</h2>
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg-5">
             <div className="middle-form">
               <input
                 type="text"

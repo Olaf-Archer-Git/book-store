@@ -30,8 +30,8 @@ const Contact = () => {
             <div className="row">
               <div className="col-md-6">
                 <h3 className="title">Contact Us</h3>
-                <div class="mb-1 pt-4">
-                  <label for="exampleFormControlInput1" className="form-label">
+                <div className="mb-1 pt-4">
+                  <label htmlFor="exampleFormControlInput1" className="form-label">
                     Name
                   </label>
                   <input
@@ -41,8 +41,8 @@ const Contact = () => {
                     placeholder="Name"
                   />
                 </div>
-                <div class="mb-1">
-                  <label for="exampleFormControlInput1" className="form-label">
+                <div className="mb-1">
+                  <label htmlFor="exampleFormControlInput1" className="form-label">
                     Email address
                   </label>
                   <input
@@ -52,8 +52,8 @@ const Contact = () => {
                     placeholder="name@example.com"
                   />
                 </div>
-                <div class="mb-1">
-                  <label for="exampleFormControlInput1" className="form-label">
+                <div className="mb-1">
+                  <label htmlFor="exampleFormControlInput1" className="form-label">
                     Phone Number
                   </label>
                   <input
@@ -63,9 +63,9 @@ const Contact = () => {
                     placeholder="phone number"
                   />
                 </div>
-                <div class="mb-1">
+                <div className="mb-1">
                   <label
-                    for="exampleFormControlTextarea1"
+                    htmlFor="exampleFormControlTextarea1"
                     className="form-label"
                   >
                     Example textarea

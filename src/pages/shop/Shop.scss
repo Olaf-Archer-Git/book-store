@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 15px 10px;
-    background: $bg-white;
+    background: $white;
     border-radius: 5px;
     box-shadow: 1px 1px 5px $orange;
     margin-bottom: 20px;
@@ -29,7 +29,7 @@
     & svg {
       font-size: 30px;
       cursor: pointer;
-      color: $aside;
+      color: $green;
       padding: 5px;
       background: rgb(220, 220, 220);
       border-radius: 5px;
@@ -44,7 +44,7 @@
 .filter-title {
   font-weight: bold;
   font-size: 18px;
-  color: $bg-dark;
+  color: $blue;
   text-transform: capitalize;
   margin-bottom: 0;
   padding-left: 10px;

@@ -2,15 +2,15 @@
 
 .header {
   &-top {
-    background: $bg-dark;
+    background: $blue;
     padding: 5px 0;
-    border-bottom: 2px solid $color-light;
+    border-bottom: 2px solid $grey-light;
     text-align: center;
     color: $color-light;
   }
 
   &-middle {
-    background: $bg-dark;
+    background: $blue;
     padding: 10px 0;
     display: flex;
     justify-content: space-between;
@@ -18,7 +18,8 @@
   }
 
   &-bottom {
-    background: $bg-grey;
+    background: $grey-dark;
+    text-transform: capitalize;
   }
 }
 
@@ -26,17 +27,17 @@
   margin-bottom: 0;
   font-size: 17px;
   & a {
-    color: $color-light;
+    color: $grey-light;
   }
 
   & a:hover {
-    color: $btn-hover;
+    color: $orange;
   }
 }
 
 .middle {
   &-logo {
-    color: $color-primary;
+    color: $orange;
     font-weight: bold;
   }
 
@@ -58,14 +59,14 @@
     top: 13px;
     right: 5px;
     padding: 4px 30px;
-    background: $btn-color;
-    color: $bg-dark;
+    background: $orange;
+    color: $blue;
     font-size: 17px;
     border-radius: 10px;
   }
 
   &-link:hover {
-    background: $btn-hover;
+    background: $orange-light;
   }
 
   &-icons {
@@ -78,15 +79,15 @@
     text-transform: capitalize;
     & a {
       padding-left: 8px;
-      color: $color-light;
+      color: $grey-light;
     }
 
     & a:hover {
-      color: $btn-hover;
+      color: orange;
     }
 
     & svg {
-      color: $color-light;
+      color: $grey-light;
       font-size: 21px;
       margin-bottom: 5px;
     }
@@ -98,45 +99,43 @@
 
   &-cart svg:hover {
     transition: all 0.5s;
-    color: $btn-hover;
+    color: $orange;
   }
 
   &-badge {
     padding: 1px 10px;
-    color: $color-light;
-    background: $btn-color;
+    color: $grey-light;
+    background: $orange;
     border-radius: 5px;
   }
 }
 
+/////////////////
+///////////////////
+////////////////////
+////////////////////
+
 .bottom {
   &-menu {
-    border-right: 4px solid $color-light;
-  }
+    border-right: 3px solid $color-light;
+    display: flex;
+    align-items: center;
 
-  &-btn,
-  &-btn:hover,
-  &-btn:focus {
-    background: transparent;
-    box-shadow: none;
-    border: none;
-    text-transform: uppercase;
-    padding-top: 12px;
-  }
-
-  &-btn {
     & svg {
-      margin: 0 10px 3px 0;
-      font-size: 25px;
+      font-size: 30px;
+      margin-right: 10px;
+      color: $grey;
     }
   }
 
+  ///////
   &-list {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     cursor: pointer;
     margin-top: 10px;
+    padding-left: 15px;
 
     & a {
       padding: 0 30px 0 0;
@@ -151,18 +150,38 @@
   }
 }
 
-.dropdown-menu {
-  background: $bg-grey;
-  border: none;
-  padding: 10px 25px;
+.dropdown {
+  position: relative;
+  padding: 5px 25px;
+
+  & button {
+    background: $grey-dark;
+    color: $grey-light;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 35px;
+  }
 }
 
-.dropdown-item {
-  color: $color-light;
-  padding: 10px 0;
-}
+.menu {
+  position: absolute;
+  margin: 5px 0;
+  padding: 5px;
+  width: 100%;
+  left: 5%;
+  border-radius: 5px;
+  background: $grey-dark;
 
-.dropdown-item:hover {
-  background: $bg-grey;
-  color: $btn-hover;
+  &-item {
+    background: $grey-dark;
+    padding: 5px 20px;
+  }
+
+  & a {
+    color: $white;
+  }
+
+  & a:hover {
+    color: $orange;
+  }
 }
