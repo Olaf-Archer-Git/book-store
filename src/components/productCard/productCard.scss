@@ -4,8 +4,9 @@
 .cards {
   &-container {
     width: 100%;
-    background: $white;
     margin: 10px 0;
+    background: $blue-light;
+    box-sizing: 2px 2px 10px $green;
   }
 
   &-wrapper {
@@ -13,20 +14,21 @@
   }
 
   &-img {
-    background: $grey;
+    background: $white;
+    padding: 10px;
   }
 
   &-box {
-    padding: 20px;
     text-align: center;
     word-wrap: break-word;
     margin: auto 0;
+    padding: 10px;
   }
 
-  &-description{
+  &-description {
     text-transform: capitalize;
     font-size: 13px;
-    color: $blue-light;
+    color: $green;
   }
 
   &-rating {

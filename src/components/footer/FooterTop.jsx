@@ -10,16 +10,16 @@ const FooterTop = () => {
     <div className="section footer-top">
       <div className="container-xl">
         <div className="row">
-          <div className="col-md-6">
-            <SlPaperPlane className="top-img" />
-            <span className="top-title">SignUp For Newsletter</span>
+          <div className="col-lg-6">
+            
+            <p><SlPaperPlane /> SignUp For Newsletter</p>
           </div>
-          <div className="col-md-6">
+          <div className="col-lg-6">
             <div className="middle-form top-form">
               <input
                 type="text"
                 className="middle-input"
-                placeholder="Add Your Email"
+                placeholder="Email"
               />
               <Link to="/" className="middle-link">
                 Subscribe

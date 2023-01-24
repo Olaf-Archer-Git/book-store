@@ -6,15 +6,16 @@
     padding: 5px 0;
     border-bottom: 2px solid $grey-light;
     text-align: center;
-    color: $color-light;
+    color: $grey-light;
   }
 
   &-middle {
     background: $blue;
-    padding: 10px 0;
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-transform: capitalize;
   }
 
   &-bottom {
@@ -41,6 +42,8 @@
   &-logo {
     color: $orange;
     font-weight: bold;
+    white-space: nowrap;
+    font-size: 27px;
   }
 
   &-form {
@@ -49,7 +52,6 @@
 
   &-input {
     width: 100%;
-    margin-top: 10px;
     padding: 8px 100px 8px 10px;
     border-radius: 10px;
     border: none;
@@ -58,7 +60,7 @@
 
   &-link {
     position: absolute;
-    top: 13px;
+    top: 3px;
     right: 5px;
     padding: 4px 30px;
     background: $orange;
@@ -74,11 +76,11 @@
   &-icons {
     display: flex;
     justify-content: space-between;
-    margin-top: 15px;
+    align-items: center;
+    margin-top: 5px;
   }
 
   &-item {
-    text-transform: capitalize;
     & a {
       padding-left: 8px;
       color: $grey-light;
@@ -115,18 +117,14 @@
 .bottom {
   &-container {
     display: flex;
-    align-items: center;
-    border-right: 2px solid $grey-light;
+    align-items: baseline;
 
     & svg {
       font-size: 30px;
       color: $grey;
-
-      margin-left: 0;
+      transform: translateY(-2px);
     }
   }
-
-  //////////////////////////////////////////////////////
 
   &-list {
     display: flex;
@@ -134,7 +132,7 @@
     align-items: center;
     cursor: pointer;
     margin-top: 10px;
-    padding-left: 15px;
+    padding-left: 0;
 
     & a {
       padding-right: 25px;
@@ -159,6 +157,7 @@
     color: $grey-light;
     font-size: 18px;
     font-weight: bold;
+    margin-top: 5px;
     padding: 5px 35px;
   }
 }
@@ -168,7 +167,7 @@
   margin: 5px 0;
   padding: 5px;
   width: 100%;
-  left: 5%;
+  left: 15%;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   background: $grey-dark;
@@ -184,5 +183,46 @@
 
   & a:hover {
     color: $orange;
+  }
+}
+
+@media (max-width: 991px) {
+  .middle-logo {
+    font-size: 23px;
+  }
+
+  .middle-icons {
+    margin-top: 20px;
+  }
+
+  .menu {
+    width: 150%;
+    left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .middle-icons {
+    & svg:not(:last-child) {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  .middle-icons {
+    display: block;
+  }
+
+  .middle-item {
+    padding: 20px 0;
+  }
+
+  .bottom-list {
+    display: block;
+
+    & li {
+      padding: 20px 0;
+    }
   }
 }

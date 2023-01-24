@@ -4,10 +4,15 @@
 .news {
   &-box {
     text-align: center;
-    box-shadow: 2px 2px 10px $blue-light;
+    box-shadow: 2px 2px 10px $brown;
     border-radius: 5px;
-    background: $white;
+    background: $grey-light;
     margin-bottom: 20px;
     width: 100%;
+  }
+
+  & p {
+    padding: 0 10px;
+    white-space: pre-line;
   }
 }

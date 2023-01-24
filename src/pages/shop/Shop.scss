@@ -1,6 +1,9 @@
 @import "../../style/variables.scss";
+@import "../../style/App.scss";
 
 .shop {
+  background: $grey-light;
+
   &-filter {
     display: flex;
     align-items: center;
@@ -31,7 +34,7 @@
       cursor: pointer;
       color: $green;
       padding: 5px;
-      background: rgb(220, 220, 220);
+      background: $grey;
       border-radius: 5px;
     }
   }
@@ -48,6 +51,7 @@
   text-transform: capitalize;
   margin-bottom: 0;
   padding-left: 10px;
+  white-space: nowrap;
 }
 
 .form-select {

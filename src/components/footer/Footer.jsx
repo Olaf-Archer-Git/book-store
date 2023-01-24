@@ -11,7 +11,7 @@ const Footer = () => {
     <footer className="footer">
       <FooterTop />
       <FooterBottom />
-      <div className="footer-copyright">
+      <div className="text-center py-2">
         <AiOutlineCopyrightCircle />
         <span>{new Date().getFullYear()}. Book Store License</span>
       </div>

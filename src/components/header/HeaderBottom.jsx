@@ -36,14 +36,14 @@ const HeaderBottom = () => {
                 Categories
               </button>
               {isOpen && (
-                <ul className="dropdown-menu">
-                  <li className="dropdown-item">
+                <ul className="menu">
+                  <li className="menu-item">
                     <Link to="/shop">Categories 1</Link>
                   </li>
-                  <li className="dropdown-item">
+                  <li className="menu-item">
                     <Link to="/blog">Categories 2</Link>
                   </li>
-                  <li className="dropdown-item">
+                  <li className="menu-item">
                     <Link to="/contact">Categories 3</Link>
                   </li>
                 </ul>
@@ -53,8 +53,20 @@ const HeaderBottom = () => {
         </div>
         <div className="col-lg-9">
           <div className="bottom-container">
-            <div>2</div>
-            <div>2</div>
+            <ul className="bottom-list">
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact</Link>
+              </li>
+              <li>
+                <Link to="/blog">Blog</Link>
+              </li>
+              <li>
+                <Link to="/shop">Shop</Link>
+              </li>
+            </ul>
           </div>
         </div>
       </Container>
@@ -64,48 +76,3 @@ const HeaderBottom = () => {
 
 export default HeaderBottom;
 
-// <div className="header-bottom">
-//     <Container className={"container-xxl"}>
-//       <div className="col-md-3 bottom-menu">
-//         <div className="dropdown" ref={ref}>
-//           <CgMenuGridO />
-//           <button
-//             onClick={() => {
-//               setIsOpen(!isOpen);
-//             }}
-//           >
-//             Categories
-//           </button>
-//           {isOpen && (
-//             <ul className="menu">
-//               <li className="menu-item">
-//                 <Link to="/shop">Categories 1</Link>
-//               </li>
-//               <li className="menu-item">
-//                 <Link to="/blog">Categories 2</Link>
-//               </li>
-//               <li className="menu-item">
-//                 <Link to="/contact">Categories 3</Link>
-//               </li>
-//             </ul>
-//           )}
-//         </div>
-//       </div>
-//       <div className="col-md-9">
-//         <ul className="bottom-list">
-//           <li>
-//             <Link to="/">Home</Link>
-//           </li>
-//           <li>
-//             <Link to="/contact">Contact</Link>
-//           </li>
-//           <li>
-//             <Link to="/blog">Blog</Link>
-//           </li>
-//           <li>
-//             <Link to="/shop">Shop</Link>
-//           </li>
-//         </ul>
-//       </div>
-//     </Container>
-//   </div>
