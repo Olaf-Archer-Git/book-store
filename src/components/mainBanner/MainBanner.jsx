@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 import img1 from "../../assets/mainBanner2.png";
 import img2 from "../../assets/mainBannerLogo.png";
 import {
@@ -34,19 +34,35 @@ const MainBanner = () => {
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae
             sit amet consectetur adipisicing
           </div>
-          <div className="main-social">
-            <Link className="bottom-social-item">
+          <div className="bottom-social">
+            <a
+              href="https://www.youtube.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <AiOutlineYoutube />
-            </Link>
-            <Link className="bottom-social-item">
+            </a>
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <AiOutlineFacebook />
-            </Link>
-            <Link className="bottom-social-item">
+            </a>
+            <a
+              href="https://www.twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <AiOutlineTwitter />
-            </Link>
-            <Link className="bottom-social-item">
+            </a>
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <AiOutlineInstagram />
-            </Link>
+            </a>
           </div>
         </div>
         <div className="main-img">
