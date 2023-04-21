@@ -1,45 +1,96 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Meta from "../../components/meta/Meta";
 import BreadCrumbs from "../../components/breadcrumbs/BreadCrumbs";
+import CustomInput from "../../components/customInput/CustomInput";
+import { useFormik } from "formik";
+import * as yup from "yup";
+import CustomButton from "../../components/button/CustomButton";
+import { useDispatch, useSelector } from "react-redux";
+import { userLogin } from "../../features/users/userSlice";
 import "./Login.scss";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const authState = useSelector((state) => state.user);
+
+  const { user, isSuccess } = authState;
+
+  useEffect(() => {
+    isSuccess ? navigate("/") : navigate("/login");
+  }, [user, isSuccess, navigate]);
+
+  let loginSchema = yup.object({
+    email: yup
+      .string()
+      .email("Email Should Be Valid")
+      .required("Email Is Required"),
+    password: yup
+      .string()
+      .required("Password Is Required")
+      .min(5, "Must Contain At Least 5 Characters"),
+  });
+
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+    },
+    validationSchema: loginSchema,
+    onSubmit: (values) => {
+      dispatch(userLogin(values));
+    },
+  });
   return (
     <>
       <Meta title={"Login"} />
       <BreadCrumbs title={"Login"} />
       <section className="login">
-        <div className="container-xl">
-          <div className="col-md-5 mx-auto">
-            <div className="login-container">
-              <h3>Login</h3>
-              <div className="form-box">
-                <form action="">
-                  <div>
-                    <input
-                      type="text"
-                      className="form-text"
-                      placeholder="email"
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="password"
-                      className="form-password"
-                      placeholder="password"
-                    />
-                  </div>
-                </form>
+        <div className="col-md-5 mx-auto">
+          <div className="login-container">
+            <h3>Login</h3>
+
+            <form onSubmit={formik.handleSubmit} className="form-box">
+              <div>
+                <CustomInput
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  formikValue={formik.values.email}
+                  formikHandler={formik.handleChange("email")}
+                />
+                <div className="input-error">
+                  {formik.touched.email && formik.errors.email}
+                </div>
               </div>
-              <div className="login-prompt">
-                <Link to="/forgot-password">Forgot The Password ?</Link>
+              <div>
+                <CustomInput
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  formikValue={formik.values.password}
+                  formikHandler={formik.handleChange("password")}
+                />
+                <div className="input-error">
+                  {formik.touched.password && formik.errors.password}
+                </div>
               </div>
-              <div className="btn-main button">
-                <button type="submit" className="login-btn">Login</button>
-                {/* <Link>Sign In</Link> */}
-                <Link to="/registration">Sign Up</Link>
+
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                <CustomButton
+                  type="submit"
+                  text="login"
+                  className="login-btn"
+                  align="center"
+                />
+                <Link className="login-link" to="/registration">
+                  Sign Up
+                </Link>
               </div>
+            </form>
+            <div className="login-prompt">
+              <Link to="/forgot-password">Forgot The Password ?</Link>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import BreadCrumbs from "../../components/breadcrumbs/BreadCrumbs";
 import Meta from "../../components/meta/Meta";
 import {
@@ -8,12 +9,27 @@ import {
 } from "react-icons/tfi";
 import AsideShop from "./AsideShop.jsx";
 import ProductCard from "../../components/productCard/ProductCard";
+import Container from "../../components/container/Container";
+import { getAllProducts } from "../../features/products/productSlice";
 
 import "./Shop.scss";
-import Container from "../../components/container/Container";
 
 const Shop = () => {
   const [sortLayout, setSortLayout] = useState("col-lg-4");
+  const dispatch = useDispatch();
+  const productState = useSelector((state) => state.product.products);
+
+  // const getProducts = useCallback(() => {
+  //   dispatch(getAllProducts());
+  // }, [dispatch]);
+
+  // useEffect(() => {
+  //   getProducts();
+  // }, [getProducts]);
+
+  useEffect(() => {
+    dispatch(getAllProducts());
+  }, [dispatch]);
 
   return (
     <>
@@ -41,17 +57,17 @@ const Shop = () => {
                   <p className="shop-products">number of products</p>
                   <TfiLayoutColumn2
                     onClick={() => {
-                      setSortLayout("size-12");
+                      setSortLayout("col-lg-8");
                     }}
                   />
                   <TfiLayoutGrid2
                     onClick={() => {
-                      setSortLayout("size-6");
+                      setSortLayout("col-lg-6");
                     }}
                   />
                   <TfiLayoutGrid3
                     onClick={() => {
-                      setSortLayout("size-4");
+                      setSortLayout("col-lg-4");
                     }}
                   />
                 </div>
@@ -59,7 +75,10 @@ const Shop = () => {
             </div>
             <div className="shop-list">
               <div className="row">
-                <ProductCard sortLayout={sortLayout} />
+                <ProductCard
+                  sortLayout={sortLayout}
+                  productState={productState}
+                />
               </div>
             </div>
           </div>

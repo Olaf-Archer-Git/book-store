@@ -1,6 +1,13 @@
 import React from "react";
 
-const CustomInput = ({ type, name, placeholder, className }) => {
+const CustomInput = ({
+  type,
+  name,
+  placeholder,
+  className,
+  formikValue,
+  formikHandler,
+}) => {
   return (
     <div>
       <input
@@ -8,6 +15,8 @@ const CustomInput = ({ type, name, placeholder, className }) => {
         name={name}
         className={className}
         placeholder={placeholder}
+        value={formikValue}
+        onChange={formikHandler}
       />
     </div>
   );

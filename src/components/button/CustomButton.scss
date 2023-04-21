@@ -1,0 +1,30 @@
+@import "../../style/variables.scss";
+
+.registration-btn {
+  padding: 10px 30px;
+  border: 2px solid $brown;
+  background: transparent;
+  color: $brown;
+  font-size: 13px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+.registration-btn:hover {
+  background: $white;
+  color: $brown;
+}
+
+.login-btn {
+  border: 2px solid $green;
+  border-radius: 5px;
+  color: $green;
+  padding: 5px 20px;
+  text-transform: uppercase;
+  background: $white;
+  transition: all 0.5s;
+}
+.login-btn:hover {
+  color: $white;
+  background: $green;
+}

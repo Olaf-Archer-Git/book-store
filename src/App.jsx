@@ -21,7 +21,6 @@ import CheckOut from "./pages/checkout/CheckOut.jsx";
 
 import "./style/App.scss";
 
-
 function App() {
   return (
     <BrowserRouter>
@@ -31,8 +30,8 @@ function App() {
           <Route path="blog" element={<Blog />} />
           <Route path="blog/:id" element={<SingleBlog />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="shop" element={<Shop />} />
-          <Route path="shop/:id" element={<MainProduct />} />
+          <Route path="product" element={<Shop />} />
+          <Route path="product/:id" element={<MainProduct />} />
           <Route path="compare" element={<Comparing />} />
           <Route path="favorite" element={<Favorite />} />
           <Route path="login" element={<Login />} />

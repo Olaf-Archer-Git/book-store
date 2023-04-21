@@ -23,6 +23,8 @@
     word-wrap: break-word;
     margin: auto 0;
     padding: 10px;
+    height: 250px;
+    position: relative;
   }
 
   &-description {
@@ -46,45 +48,25 @@
     left: 1%;
     padding-left: 7px;
     padding-bottom: 2px;
-
     border: 2px solid $orange;
     width: 40px;
     height: 40px;
     border-radius: 50%;
   }
-}
 
-.size-12 {
-  width: 100%;
-}
+  &-link {
+    position: absolute;
+    bottom: 30px;
+    transform: translate(-50%, 0);
+    padding: 7px 30px;
+    border: 2px solid $blue;
+    color: $blue;
+    background: $white;
+    border-radius: 5px;
+  }
 
-.size-12 .cards-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.size-12 .cards-box {
-  min-width: 50%;
-}
-
-.size-6 {
-  width: 50%;
-}
-
-.size-6 .cards-container {
-  display: flex;
-}
-
-.size-6 .cards-img {
-  height: 100%;
-}
-
-.size-6 .cards-box {
-  min-width: 50%;
-}
-
-.size-4 {
-  width: 33%;
-  padding-right: 0;
-  margin-right: 0;
+  &-link:hover {
+    color: $white;
+    background: $blue;
+  }
 }

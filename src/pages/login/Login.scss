@@ -14,34 +14,21 @@
   & h3 {
     text-align: center;
     color: $brown;
+    margin-bottom: 0;
   }
 
   &-prompt {
-    padding: 0 5px;
+    margin-top: 25px;
+    text-align: center;
+    transition: all 0.5s;
 
     & a {
       color: $blue;
-      transition: all 0.5s;
     }
 
     & a:hover {
-      color: $white;
+      color: $green;
     }
-  }
-
-  &-btn{
-    outline: none;
-    border: 2px solid $brown ;
-    border-radius: 5px;
-    color: $brown;
-    padding: 5px 20px;
-    text-transform: uppercase;
-    background: transparent;
-    transition: all 0.5s;
-  }
-  &-btn:hover{
-    color: $white;
-    background: $brown;
   }
 }
 
@@ -56,7 +43,6 @@
     border-radius: 5px;
     border: 2px solid $brown;
     font-size: 17px;
-    text-transform: capitalize;
   }
 
   & input::placeholder {
@@ -64,12 +50,17 @@
   }
 }
 
-.button {
-  padding: 25px 0 !important ;
-  display: flex;
-  justify-content: space-evenly;
+.login-link {
+  padding: 5px 20px;
+  border: 2px solid $brown;
+  height: 50%;
+  margin: 19px 0 0 30px;
+  border-radius: 5px;
+  color: $brown;
+  text-transform: uppercase;
+}
 
-  & a {
-    margin-left: 10px;
-  }
+.login-link:hover {
+  background: $brown;
+  color: $white;
 }

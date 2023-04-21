@@ -64,7 +64,7 @@ const HeaderBottom = () => {
                 <Link to="/blog">Blog</Link>
               </li>
               <li>
-                <Link to="/shop">Shop</Link>
+                <Link to="/product">Shop</Link>
               </li>
             </ul>
           </div>
@@ -75,4 +75,3 @@ const HeaderBottom = () => {
 };
 
 export default HeaderBottom;
-
