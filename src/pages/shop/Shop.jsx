@@ -10,7 +10,7 @@ import {
 import AsideShop from "./AsideShop.jsx";
 import ProductCard from "../../components/productCard/ProductCard";
 import Container from "../../components/container/Container";
-import { getAllProducts } from "../../features/products/productSlice";
+import { getAllProducts } from "../../features/product/productSlice";
 
 import "./Shop.scss";
 
@@ -54,7 +54,6 @@ const Shop = () => {
               </div>
               <div className="shop-sort">
                 <div className="shop-item">
-                  <p className="shop-products">number of products</p>
                   <TfiLayoutColumn2
                     onClick={() => {
                       setSortLayout("col-lg-8");

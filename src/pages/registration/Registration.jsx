@@ -8,7 +8,7 @@ import * as yup from "yup";
 
 import CustomButton from "../../components/button/CustomButton";
 import { useDispatch } from "react-redux";
-import { userRegister } from "../../features/users/userSlice";
+import { userRegister } from "../../features/user/userSlice";
 
 const Registration = () => {
   const dispatch = useDispatch();

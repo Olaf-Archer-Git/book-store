@@ -1,25 +1,17 @@
-import React, { useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 import Meta from "../../components/meta/Meta";
 import BreadCrumbs from "../../components/breadcrumbs/BreadCrumbs";
 import CustomInput from "../../components/customInput/CustomInput";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import CustomButton from "../../components/button/CustomButton";
-import { useDispatch, useSelector } from "react-redux";
-import { userLogin } from "../../features/users/userSlice";
+import { useDispatch } from "react-redux";
+import { userLogin } from "../../features/user/userSlice";
 import "./Login.scss";
 
 const Login = () => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
-  const authState = useSelector((state) => state.user);
-
-  const { user, isSuccess } = authState;
-
-  useEffect(() => {
-    isSuccess ? navigate("/") : navigate("/login");
-  }, [user, isSuccess, navigate]);
 
   let loginSchema = yup.object({
     email: yup
