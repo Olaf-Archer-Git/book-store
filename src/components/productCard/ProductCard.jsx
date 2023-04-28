@@ -1,37 +1,32 @@
 import React from "react";
 import ReactStars from "react-rating-stars-component";
-// import { useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { BsSuitHeart } from "react-icons/bs";
 import { Link } from "react-router-dom";
-// import { addToFavorite } from "../../features/product/productSlice";
+import { addToFavorite } from "../../features/product/productSlice";
 
 import "./ProductCard.scss";
-/////
-import axios from "axios";
-import { tokenConfig } from "../../utils/tokenConfig";
-
-//////
 
 const ProductCard = ({ sortLayout, productState }) => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-  // const addToFavoriteProduct = (id) => {
-  //   dispatch(addToFavorite(id));
-  // };
+  const addToFavoriteProduct = (id) => {
+    dispatch(addToFavorite(id));
+  };
 
   const ratingChanged = () => {
     console.log("newRating");
   };
 
   /////////////////////////////////////////////////////////////
-  const favorite = async (prodID) => {
-    const response = await axios.put(
-      "http://localhost:3003/api/product/favorite",
-      { prodID },
-      tokenConfig
-    );
-    return response.data;
-  };
+  // const favorite = async (prodID) => {
+  //   const response = await axios.put(
+  //     "http://localhost:3003/api/product/favorite",
+  //     { prodID },
+  //     tokenConfig
+  //   );
+  //   return response.data;
+  // };
 
   /////
 
@@ -50,7 +45,7 @@ const ProductCard = ({ sortLayout, productState }) => {
                     title="add to favorite"
                     className="cards-like"
                     onClick={() => {
-                      favorite(item?._id);
+                      addToFavoriteProduct(item?._id);
                     }}
                   >
                     <BsSuitHeart />
