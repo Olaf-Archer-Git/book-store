@@ -19,14 +19,6 @@ const Shop = () => {
   const dispatch = useDispatch();
   const productState = useSelector((state) => state.product.products);
 
-  // const getProducts = useCallback(() => {
-  //   dispatch(getAllProducts());
-  // }, [dispatch]);
-
-  // useEffect(() => {
-  //   getProducts();
-  // }, [getProducts]);
-
   useEffect(() => {
     dispatch(getAllProducts());
   }, [dispatch]);

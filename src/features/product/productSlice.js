@@ -1,8 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
-import { baseURL } from "../../utils/baseURL";
 import { toast } from "react-toastify";
-import { tokenConfig } from "../../utils/tokenConfig";
+import { productService } from "./productService";
 
 const initialState = {
   products: "",
@@ -16,8 +14,7 @@ export const getAllProducts = createAsyncThunk(
   "product/get-products",
   async (thunkAPI) => {
     try {
-      const response = await axios.get(`${baseURL}product`);
-      return response.data;
+      return await productService.products();
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
     }
@@ -25,18 +22,10 @@ export const getAllProducts = createAsyncThunk(
 );
 
 export const addToFavorite = createAsyncThunk(
-  "product/add-to-favorite",
-  async (ProdID, thunkAPI) => {
+  "product/add-favorite",
+  async (prodID, thunkAPI) => {
     try {
-      const response = await axios.put(
-        `${baseURL}product/favorite`,
-        {
-          ProdID,
-        },
-
-        tokenConfig
-      );
-      return response.data;
+      return await productService.favorite(prodID);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
     }
@@ -76,10 +65,6 @@ export const productSlice = createSlice({
         state.isError = false;
         state.isSuccess = true;
         state.addedProduct = action.payload;
-        localStorage.getItem("token");
-        if (state.isSuccess) {
-          toast.success("Product Added To Favorite");
-        }
       })
       .addCase(addToFavorite.rejected, (state, action) => {
         state.isLoading = false;
@@ -87,7 +72,7 @@ export const productSlice = createSlice({
         state.isError = true;
         state.message = action.error;
         if (state.isError) {
-          toast.error("Can't Add Product");
+          toast.error("Error Occured");
         }
       });
   },

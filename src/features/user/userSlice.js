@@ -36,6 +36,17 @@ export const userLogin = createAsyncThunk(
   }
 );
 
+export const getUserFavorite = createAsyncThunk(
+  "user/get-favorite",
+  async (thunkAPI) => {
+    try {
+      return await userService.getFavorite();
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
+    }
+  }
+);
+
 export const userSlice = createSlice({
   name: "user",
   initialState,
@@ -78,6 +89,28 @@ export const userSlice = createSlice({
         }
       })
       .addCase(userLogin.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = false;
+        state.isError = true;
+        state.message = action.error;
+        if (state.isError) {
+          toast.error("Something Goes Wrong");
+        }
+      })
+
+      .addCase(getUserFavorite.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getUserFavorite.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isError = false;
+        state.isSuccess = true;
+        state.userFavorite = action.payload;
+        if (state.isSuccess) {
+          toast.info("You Logged Successfully");
+        }
+      })
+      .addCase(getUserFavorite.rejected, (state, action) => {
         state.isLoading = false;
         state.isSuccess = false;
         state.isError = true;
