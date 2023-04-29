@@ -18,18 +18,6 @@ const ProductCard = ({ sortLayout, productState }) => {
     console.log("newRating");
   };
 
-  /////////////////////////////////////////////////////////////
-  // const favorite = async (prodID) => {
-  //   const response = await axios.put(
-  //     "http://localhost:3003/api/product/favorite",
-  //     { prodID },
-  //     tokenConfig
-  //   );
-  //   return response.data;
-  // };
-
-  /////
-
   return (
     <>
       {productState &&

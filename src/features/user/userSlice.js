@@ -106,9 +106,6 @@ export const userSlice = createSlice({
         state.isError = false;
         state.isSuccess = true;
         state.userFavorite = action.payload;
-        if (state.isSuccess) {
-          toast.info("You Logged Successfully");
-        }
       })
       .addCase(getUserFavorite.rejected, (state, action) => {
         state.isLoading = false;

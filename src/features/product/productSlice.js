@@ -72,7 +72,7 @@ export const productSlice = createSlice({
         state.isError = true;
         state.message = action.error;
         if (state.isError) {
-          toast.error("Error Occured");
+          toast.error("It Something  Terrible Occurred");
         }
       });
   },

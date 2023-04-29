@@ -18,7 +18,7 @@ const login = async (userData) => {
   return response.data;
 };
 
-const getFavorite = async (userData) => {
+const getFavorite = async () => {
   const response = await axios.get(`${baseURL}user/favorite`, tokenConfig);
 
   return response.data;

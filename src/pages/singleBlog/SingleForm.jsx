@@ -30,7 +30,7 @@ const SingleForm = () => {
         </div>
         <div className="row mt-3">
           <div className="col-md-12">
-            <div class="mb-3">
+            <div className="mb-3">
               <textarea
                 className="form-control"
                 id="exampleFormControlTextarea1"
