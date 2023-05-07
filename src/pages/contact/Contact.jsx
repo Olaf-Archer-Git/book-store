@@ -1,5 +1,5 @@
 import React from "react";
-// import { useDispatch } from "react";
+import { useDispatch } from "react-redux";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import Meta from "../../components/meta/Meta";
@@ -8,11 +8,12 @@ import Container from "../../components/container/Container";
 import { BsHouse, BsTelephone, BsEnvelope, BsInfoCircle } from "react-icons/bs";
 import CustomButton from "../../components/button/CustomButton";
 import CustomInput from "../../components/customInput/CustomInput";
+import { createQuery } from "../../features/contact/contactSlice";
 
 import "./Contact.scss";
 
 const Contact = () => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   let contactSchema = yup.object({
     name: yup.string().required("Name Is Required"),
@@ -20,19 +21,18 @@ const Contact = () => {
       .string()
       .email("Email Should Be Valid")
       .required("Email Is Required"),
-    comment: yup.string(),
+    message: yup.string().required("Message Is Required"),
   });
 
   const formik = useFormik({
     initialValues: {
       name: "",
       email: "",
-      comment: "",
+      message: "",
     },
     validationSchema: contactSchema,
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-      // dispatch(userRegister(values));
+      dispatch(createQuery(values));
     },
   });
 
@@ -86,10 +86,10 @@ const Contact = () => {
                     id="exampleFormControlTextarea1"
                     rows="4"
                     type="text"
-                    name="comment"
-                    placeholder="Comment"
-                    value={formik.values.comment}
-                    onChange={formik.handleChange("comment")}
+                    name="message"
+                    placeholder="Message"
+                    value={formik.values.message}
+                    onChange={formik.handleChange("message")}
                   ></textarea>
 
                   <CustomButton

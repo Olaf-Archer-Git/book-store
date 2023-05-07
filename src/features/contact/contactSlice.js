@@ -15,7 +15,7 @@ export const createQuery = createAsyncThunk(
   "query/create-query",
   async (contactData, thunkAPI) => {
     try {
-      const response = await axios.post(`${baseURL}queries`, { contactData });
+      const response = await axios.post(`${baseURL}queries`, contactData);
 
       return response.data;
     } catch (error) {
@@ -38,6 +38,9 @@ export const contactSlice = createSlice({
         state.isError = false;
         state.isSuccess = true;
         state.contacts = action.payload;
+        if (state.isSuccess) {
+          toast.success("We Got Your Message");
+        }
       })
       .addCase(createQuery.rejected, (state, action) => {
         state.isLoading = false;
