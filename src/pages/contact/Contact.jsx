@@ -1,13 +1,41 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { useDispatch } from "react";
+import { useFormik } from "formik";
+import * as yup from "yup";
 import Meta from "../../components/meta/Meta";
 import BreadCrumbs from "../../components/breadcrumbs/BreadCrumbs";
+import Container from "../../components/container/Container";
 import { BsHouse, BsTelephone, BsEnvelope, BsInfoCircle } from "react-icons/bs";
+import CustomButton from "../../components/button/CustomButton";
+import CustomInput from "../../components/customInput/CustomInput";
 
 import "./Contact.scss";
-import Container from "../../components/container/Container";
 
 const Contact = () => {
+  // const dispatch = useDispatch();
+
+  let contactSchema = yup.object({
+    name: yup.string().required("Name Is Required"),
+    email: yup
+      .string()
+      .email("Email Should Be Valid")
+      .required("Email Is Required"),
+    comment: yup.string(),
+  });
+
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      comment: "",
+    },
+    validationSchema: contactSchema,
+    onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2));
+      // dispatch(userRegister(values));
+    },
+  });
+
   return (
     <>
       <Meta title={"Contact"} />
@@ -30,55 +58,47 @@ const Contact = () => {
             <div className="row">
               <div className="col-md-6">
                 <h3 className="title">Contact Us</h3>
-                <div className="mb-1 pt-4">
-                  <label htmlFor="exampleFormControlInput1" className="form-label">
-                    Name
-                  </label>
-                  <input
-                    type="text"
+                <form
+                  action=""
+                  onSubmit={formik.handleSubmit}
+                  className="contact-box"
+                >
+                  <CustomInput
                     className="form-control"
-                    id="exampleFormControlInput1"
+                    type="text"
+                    name="name"
                     placeholder="Name"
+                    formikValue={formik.values.name}
+                    formikHandler={formik.handleChange("name")}
                   />
-                </div>
-                <div className="mb-1">
-                  <label htmlFor="exampleFormControlInput1" className="form-label">
-                    Email address
-                  </label>
-                  <input
+
+                  <CustomInput
+                    className="form-control my-3"
                     type="email"
-                    className="form-control"
-                    id="exampleFormControlInput1"
-                    placeholder="name@example.com"
+                    name="email"
+                    placeholder="Email"
+                    formikValue={formik.values.email}
+                    formikHandler={formik.handleChange("email")}
                   />
-                </div>
-                <div className="mb-1">
-                  <label htmlFor="exampleFormControlInput1" className="form-label">
-                    Phone Number
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="exampleFormControlInput1"
-                    placeholder="phone number"
-                  />
-                </div>
-                <div className="mb-1">
-                  <label
-                    htmlFor="exampleFormControlTextarea1"
-                    className="form-label"
-                  >
-                    Example textarea
-                  </label>
+
                   <textarea
                     className="form-control"
                     id="exampleFormControlTextarea1"
                     rows="4"
+                    type="text"
+                    name="comment"
+                    placeholder="Comment"
+                    value={formik.values.comment}
+                    onChange={formik.handleChange("comment")}
                   ></textarea>
-                </div>
-                <div className="btn-main">
-                  <Link>submit</Link>
-                </div>
+
+                  <CustomButton
+                    type="submit"
+                    text="Contact Us"
+                    className="registration-btn"
+                    align="center"
+                  />
+                </form>
               </div>
               <div className="col-md-6">
                 <h3 className="title">Get in touch with us</h3>

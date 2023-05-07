@@ -1,15 +1,23 @@
-import React from "react";
-import NewsCard from "../../components/newsCard/NewsCard.jsx";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+// import NewsCard from "../../components/newsCard/NewsCard";
 import SpecialCard from "../../components/specialCard/SpecialCard";
 import Banner from "../../components/banner/Banner";
 import MainBanner from "../../components/mainBanner/MainBanner";
 import Promotion from "../../components/promotion/Promotion.jsx";
 import Container from "../../components/container/Container.jsx";
-
+import { getAllProducts } from "../../features/product/productSlice";
 ////***********////
 import "./Home.scss";
 
 const Home = () => {
+  const dispatch = useDispatch();
+  const productState = useSelector((state) => state.product.products);
+
+  useEffect(() => {
+    dispatch(getAllProducts());
+  }, [dispatch]);
+
   return (
     <main className="home">
       <section className="promotion">
@@ -29,8 +37,8 @@ const Home = () => {
         </Container>
       </section>
       <section className="news">
-        <h2 className="home-caption">News card</h2>
-        <Container className={"container-fluid"}>
+        <h2 className="home-caption">Discount Products</h2>
+        {/* <Container className={"container-fluid"}>
           <div className="col-lg-3">
             <NewsCard />
           </div>
@@ -43,14 +51,21 @@ const Home = () => {
           <div className="col-lg-3">
             <NewsCard />
           </div>
-        </Container>
+        </Container> */}
       </section>
       <section className="special">
         <h2 className="home-caption">Special Offer</h2>
         <Container className={"container-xxl"}>
-          <SpecialCard />
-          <SpecialCard />
-          <SpecialCard />
+          {productState &&
+            productState.map((item) => {
+              if (item.tags === "special") {
+                return (
+                  <div className="col-lg-6" key={item._id}>
+                    <SpecialCard state={item} />
+                  </div>
+                );
+              }
+            })}
         </Container>
       </section>
     </main>

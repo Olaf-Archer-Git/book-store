@@ -1,8 +1,9 @@
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import Meta from "../../components/meta/Meta";
 import BreadCrumbs from "../../components/breadcrumbs/BreadCrumbs";
-import img1 from "../../assets/grid-bg4.jpg";
+import moment from "moment";
 import { FaArrowLeft } from "react-icons/fa";
 import {
   AiOutlineYoutube,
@@ -10,17 +11,28 @@ import {
   AiOutlineTwitter,
   AiOutlineInstagram,
 } from "react-icons/ai";
-
-import "./SingleBlog.scss";
 import SingleForm from "./SingleForm";
 import Container from "../../components/container/Container";
+import { getSingleBlog } from "../../features/blog/blogSlice";
+
+import "./SingleBlog.scss";
 
 const SingleBlog = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const getBlogID = location.pathname.split("/")[2];
+
+  const dispatch = useDispatch();
+  const blogState = useSelector((state) => state?.blog?.singleBlog);
+
+  useEffect(() => {
+    dispatch(getSingleBlog(getBlogID));
+  }, [dispatch, getBlogID]);
   return (
     <>
-      <Meta title={"blog item"} />
-      <BreadCrumbs title={"blog item"} />
+      <Meta title={blogState?.title} />
+      <BreadCrumbs title={blogState?.title} />
       <section className="single-blog">
         <Container className="container-xxl">
           <div className="col-lg-3">
@@ -46,24 +58,22 @@ const SingleBlog = () => {
           </div>
           <div className="col-lg-9">
             <div className="single-container">
-              <div className="title">Dynamic Title Blog</div>
+              <div className="title">{blogState?.title}</div>
               <div className="single-img">
-                <img src={img1} alt="#!" />
+                <img src={blogState?.images[0]?.url} alt="#!" />
               </div>
               <div className="single-box">
-                <div className="single-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Magnam quis hic, quia deserunt modi quisquam tenetur,
-                  distinctio rem commodi accusantium corrupti, dignissimos harum
-                  ad voluptate aut ullam earum mollitia minus. Lorem ipsum dolor
-                  sit amet, consectetur adipisicing elit. Magnam quis hic, quia
-                  deserunt modi quisquam tenetur, distinctio rem commodi
-                  accusantium corrupti, dignissimos harum ad voluptate aut ullam
-                  earum mollitia minus.
-                </div>
+                <div
+                  className="single-text"
+                  dangerouslySetInnerHTML={{ __html: blogState?.description }}
+                ></div>
                 <p className="single-subtext">
-                  Author's Name
-                  <span>10.01.2023</span>
+                  {blogState?.author}
+                  <span>
+                    {moment(blogState?.cteatedAt).format(
+                      "MMMM Do YYYY, h:mm a"
+                    )}
+                  </span>
                 </p>
               </div>
 
