@@ -15,9 +15,9 @@ import SingleBlog from "./pages/singleBlog/SingleBlog.jsx";
 import PrivacyPolicy from "./pages/privacyPolicy/PrivacyPolicy.jsx";
 import RefundPolicy from "./pages/refundPolicy/RefundPolicy.jsx";
 import Shopping from "./pages/shopping/Shopping.jsx";
-import MainProduct from "./pages/mainProduct/MainProduct.jsx";
 import Cart from "./pages/cart/Cart.jsx";
 import CheckOut from "./pages/checkout/CheckOut.jsx";
+import SingleProduct from "./pages/singleProduct/SingleProduct.jsx";
 
 import "./style/App.scss";
 
@@ -31,7 +31,7 @@ function App() {
           <Route path="blog/:id" element={<SingleBlog />} />
           <Route path="contact" element={<Contact />} />
           <Route path="product" element={<Shop />} />
-          <Route path="product/:id" element={<MainProduct />} />
+          <Route path="product/:id" element={<SingleProduct />} />
           <Route path="compare" element={<Comparing />} />
           <Route path="favorite" element={<Favorite />} />
           <Route path="login" element={<Login />} />

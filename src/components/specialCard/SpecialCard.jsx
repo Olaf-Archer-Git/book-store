@@ -53,7 +53,7 @@ const SpecialCard = ({ state }) => {
                 </div>
               </div>
               <div className="special-link">
-                <Link to="/">add to cart</Link>
+                <Link to={`/product/${state?._id}`}>View</Link>
               </div>
             </div>
           </div>

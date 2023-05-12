@@ -8,6 +8,12 @@ const products = async () => {
   return response.data;
 };
 
+const singleProduct = async (id) => {
+  const response = await axios.get(`${baseURL}product/${id}`);
+
+  return response.data;
+};
+
 const favorite = async (prodID) => {
   const response = await axios.put(
     "http://localhost:3003/api/product/favorite",
@@ -17,4 +23,4 @@ const favorite = async (prodID) => {
   return response.data;
 };
 
-export const productService = { products, favorite };
+export const productService = { products, favorite, singleProduct };

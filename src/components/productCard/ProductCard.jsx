@@ -20,7 +20,7 @@ const ProductCard = ({ sortLayout, productState }) => {
 
   return (
     <>
-      {productState &&
+      {productState.length &&
         productState.map((item) => {
           return (
             <div key={item._id} className={sortLayout}>
@@ -65,7 +65,7 @@ const ProductCard = ({ sortLayout, productState }) => {
                     Price: $<span>{item.price}</span>
                   </p>
 
-                  <Link className="cards-link" to="/product/:id">
+                  <Link className="cards-link" to={`/product/${item?._id}`}>
                     Details
                   </Link>
                 </div>

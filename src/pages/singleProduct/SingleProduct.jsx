@@ -1,21 +1,44 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { RiRecycleFill, RiLink } from "react-icons/ri";
 import { TfiHeart } from "react-icons/tfi";
 import Meta from "../../components/meta/Meta";
+import { useDispatch, useSelector } from "react-redux";
 import BreadCrumbs from "../../components/breadcrumbs/BreadCrumbs";
 import ReactStars from "react-rating-stars-component";
 import Zoom from "react-img-zoom";
-import img1 from "../../assets/book6.png";
+import { getSingleProduct } from "../../features/product/productSlice";
+import "./SingleProduct.scss";
+import img1 from "../../assets/book1.png";
+import { createOrderCart } from "../../features/order/orderSlice";
 
-import "./MainProduct.scss";
+const SingleProduct = () => {
+  const dispatch = useDispatch();
+  const productState = useSelector((state) => state.product.singleProduct);
 
-const MainProduct = () => {
+  const [quantity, setQuantity] = useState(1);
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const productId = location.pathname.split("/")[2];
+
+  const link = window.location.href;
+
   const ratingChanged = () => {
     console.log("newRating");
   };
 
-  const link = window.location.href;
+  const addToCart = (id) => {
+    dispatch(
+      createOrderCart({ productID: id, quantity, price: productState?.price })
+    );
+
+    // navigate("/cart");
+  };
+
+  useEffect(() => {
+    dispatch(getSingleProduct(productId));
+  }, [dispatch, productId]);
 
   return (
     <>
@@ -28,7 +51,11 @@ const MainProduct = () => {
               <div className="product-container">
                 <div className="product-img">
                   <Zoom
-                    img={img1}
+                    img={
+                      productState?.images[0]?.url
+                        ? productState?.images[0]?.url
+                        : img1
+                    }
                     zoomScale={1.5}
                     width={300}
                     height={350}
@@ -36,28 +63,28 @@ const MainProduct = () => {
                   />
                 </div>
                 <div className="product-box">
-                  <h3>Author's name</h3>
-                  <h3>Book's name</h3>
+                  <h3>{productState?.author}</h3>
+                  <h3>{productState?.title}</h3>
                   <p className="price">
-                    price: <span>100$</span>
+                    price: <span>{productState?.price} $</span>
                   </p>
                   <p>
                     categories:
-                    <span>&nbsp;detective</span>
-                  </p>
-                  <p>
-                    size: <span>xl</span>
+                    <span>&nbsp;{productState?.category}</span>
                   </p>
                   <p>
                     availability: <span>in stock</span>
                   </p>
                   <div className="product-review">
-                    <ReactStars
-                      count={5}
-                      onChange={ratingChanged}
-                      size={21}
-                      activeColor="#ffd700"
-                    />
+                    <div className="cards-rating">
+                      <ReactStars
+                        count={5}
+                        onChange={ratingChanged}
+                        value={productState?.totalRating}
+                        size={21}
+                        activeColor="#ffd700"
+                      />
+                    </div>
                     <p className="ms-3 text-lowercase fw-normal">
                       ( 2 reviews )
                     </p>
@@ -69,13 +96,19 @@ const MainProduct = () => {
                       className="block-input"
                       min={1}
                       max={10}
+                      value={quantity}
+                      onChange={(e) => setQuantity(e.target.value)}
                     />
                   </div>
 
                   <button type="button" className="product-btn ">
                     buy now
                   </button>
-                  <button type="button" className="product-btn">
+                  <button
+                    type="button"
+                    className="product-btn"
+                    onClick={() => addToCart(productState?._id)}
+                  >
                     add to card
                   </button>
                   <div className="links-block">
@@ -97,7 +130,7 @@ const MainProduct = () => {
                     </Link>
 
                     <Link
-                      to="#!"
+                      // to="#!"
                       className="share"
                       onClick={() => {
                         navigator.clipboard.writeText(link);
@@ -117,4 +150,4 @@ const MainProduct = () => {
   );
 };
 
-export default MainProduct;
+export default SingleProduct;
