@@ -1,20 +1,41 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Meta from "../../components/meta/Meta";
 import BreadCrumbs from "../../components/breadcrumbs/BreadCrumbs";
 import { TfiTrash } from "react-icons/tfi";
 import { useDispatch, useSelector } from "react-redux";
-import { getOrderCart } from "../../features/order/orderSlice";
+import { getOrderCart, removeOrderCart } from "../../features/order/orderSlice";
 import Container from "../../components/container/Container";
 import "./Cart.scss";
 
 const Cart = () => {
+  const [totalPrice, setTotalPrice] = useState(0);
+
   const dispatch = useDispatch();
   const orderCartState = useSelector((state) => state.order.orderCart);
 
   useEffect(() => {
     dispatch(getOrderCart());
   }, [dispatch]);
+
+  const deleteCartProduct = (id) => {
+    dispatch(removeOrderCart(id));
+
+    setTimeout(() => {
+      dispatch(getOrderCart());
+    }, 500);
+  };
+
+  useEffect(() => {
+    let totalSum = 0;
+    for (let index = 0; index < orderCartState?.length; index++) {
+      totalSum =
+        totalSum +
+        Number(orderCartState[index]?.quantity) * orderCartState[index]?.price;
+    }
+    setTotalPrice(totalSum);
+  }, [orderCartState]);
+
   return (
     <>
       <Meta title={"Product Cart"} />
@@ -32,15 +53,19 @@ const Cart = () => {
                     <div className="cart-content">
                       <h4 className="cart-title">{item?.productID?.title}</h4>
                       <h4 className="cart-title">{item?.productID?.author}</h4>
-                      <TfiTrash className="cart-icon" title="REMOVE" />
+                      <TfiTrash
+                        className="cart-icon"
+                        title="REMOVE"
+                        onClick={() => deleteCartProduct(item?._id)}
+                      />
                       <div className="cart-box">
                         <p>
-                          Price:<span>{item?.price}</span>
+                          Price: <span>{item?.price}</span>
                         </p>
                         <p>
-                          quantity:
-                          <span>{item?.quantity}</span>
+                          Quantity: <span>{item?.quantity}</span>
                         </p>
+
                         <p>
                           Total:<span>{item?.price * item?.quantity}</span>
                         </p>
@@ -51,7 +76,7 @@ const Cart = () => {
               );
             })}
 
-          <div className="col-lg-5 " style={{ position: "absolute", right: 0 }}>
+          <div className="col-lg-5 ">
             <aside className="cart-aside">
               <h4>
                 Subtotal:<span>$100</span>
@@ -59,9 +84,12 @@ const Cart = () => {
               <h4>
                 Taxes:<span>$100</span>
               </h4>
-              <h4>
-                Total:<span>$100</span>
-              </h4>
+              {totalPrice !== 0 && (
+                <h4>
+                  Total:<span>${totalPrice}</span>
+                </h4>
+              )}
+
               <p>Taxes and shipping calculated at checkout</p>
               <Link to="/checkout" className="aside-btn">
                 Check Out

@@ -4,8 +4,11 @@ import { TfiSearch, TfiHeart, TfiUser } from "react-icons/tfi";
 import { RiShoppingCartLine, RiRecycleFill } from "react-icons/ri";
 import Container from "../container/Container";
 import "./Header.scss";
+import { useSelector } from "react-redux";
 
 const HeaderMiddle = () => {
+  const quantityProducts = useSelector((state) => state.order.orderCart);
+
   return (
     <div className="header-middle">
       <Container className={"container-xxl"}>
@@ -42,7 +45,9 @@ const HeaderMiddle = () => {
               <Link to="/cart" title="Product Cart" className="middle-cart">
                 <RiShoppingCartLine />
               </Link>
-              <span className="middle-badge">0</span>
+              <span className="middle-badge">
+                {quantityProducts?.length ? quantityProducts?.length : 0}
+              </span>
             </div>
           </div>
         </div>

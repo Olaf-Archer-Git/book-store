@@ -10,15 +10,18 @@ import Zoom from "react-img-zoom";
 import { getSingleProduct } from "../../features/product/productSlice";
 import "./SingleProduct.scss";
 import img1 from "../../assets/book1.png";
-import { createOrderCart } from "../../features/order/orderSlice";
+import { createOrderCart, getOrderCart } from "../../features/order/orderSlice";
 
 const SingleProduct = () => {
   const dispatch = useDispatch();
   const productState = useSelector((state) => state.product.singleProduct);
+  const cartState = useSelector((state) => state.order.orders);
+
+  // console.log(cartState);
 
   const [quantity, setQuantity] = useState(1);
+  const [alreadyAdded, setAlreadyAdded] = useState(false);
 
-  const navigate = useNavigate();
   const location = useLocation();
   const productId = location.pathname.split("/")[2];
 
@@ -32,13 +35,20 @@ const SingleProduct = () => {
     dispatch(
       createOrderCart({ productID: id, quantity, price: productState?.price })
     );
-
-    // navigate("/cart");
   };
 
   useEffect(() => {
     dispatch(getSingleProduct(productId));
+    dispatch(getOrderCart());
   }, [dispatch, productId]);
+
+  useEffect(() => {
+    for (let index = 0; index < cartState.length; index++) {
+      if (productId === cartState[index]?.productID?._id) {
+        setAlreadyAdded(true);
+      }
+    }
+  }, [cartState, productId]);
 
   return (
     <>
@@ -89,17 +99,20 @@ const SingleProduct = () => {
                       ( 2 reviews )
                     </p>
                   </div>
-                  <div className="button-block">
-                    <span>quantity:&nbsp;</span>
-                    <input
-                      type="number"
-                      className="block-input"
-                      min={1}
-                      max={10}
-                      value={quantity}
-                      onChange={(e) => setQuantity(e.target.value)}
-                    />
-                  </div>
+
+                  {alreadyAdded === false && (
+                    <div className="button-block">
+                      <span>quantity:&nbsp;</span>
+                      <input
+                        type="number"
+                        className="block-input"
+                        min={1}
+                        max={10}
+                        value={quantity}
+                        onChange={(e) => setQuantity(e.target.value)}
+                      />
+                    </div>
+                  )}
 
                   <button type="button" className="product-btn ">
                     buy now
@@ -109,7 +122,7 @@ const SingleProduct = () => {
                     className="product-btn"
                     onClick={() => addToCart(productState?._id)}
                   >
-                    add to card
+                    Add To Card
                   </button>
                   <div className="links-block">
                     <div className="middle-item">
@@ -130,7 +143,6 @@ const SingleProduct = () => {
                     </Link>
 
                     <Link
-                      // to="#!"
                       className="share"
                       onClick={() => {
                         navigator.clipboard.writeText(link);

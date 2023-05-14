@@ -42,6 +42,23 @@ export const getOrderCart = createAsyncThunk(
   }
 );
 
+export const removeOrderCart = createAsyncThunk(
+  "cart/remove-order-cart",
+  async (cartItemId, thunkAPI) => {
+    try {
+      const response = await axios.delete(
+        `${baseURL}order/cart/${cartItemId}`,
+
+        tokenConfig
+      );
+
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
+    }
+  }
+);
+
 export const orderSlice = createSlice({
   name: "orders",
   initialState,
@@ -80,6 +97,28 @@ export const orderSlice = createSlice({
         state.orderCart = action.payload;
       })
       .addCase(getOrderCart.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = false;
+        state.isError = true;
+        state.message = action.error;
+        if (state.isError) {
+          toast.error("Something Goes Wrong");
+        }
+      })
+
+      .addCase(removeOrderCart.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(removeOrderCart.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isError = false;
+        state.isSuccess = true;
+        state.deletedCart = action.payload;
+        if (state.isSuccess) {
+          toast.info("Product Deleted");
+        }
+      })
+      .addCase(removeOrderCart.rejected, (state, action) => {
         state.isLoading = false;
         state.isSuccess = false;
         state.isError = true;
