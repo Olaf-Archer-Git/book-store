@@ -5,9 +5,15 @@ import BreadCrumbs from "../../components/breadcrumbs/BreadCrumbs";
 import { AiOutlineDoubleLeft } from "react-icons/ai";
 import CheckOutOrder from "./CheckOutOrder";
 import Container from "../../components/container/Container";
+import { useDispatch, useSelector } from "react-redux";
 import "./CheckOut.scss";
 
 const CheckOut = () => {
+  const dispatch = useDispatch();
+  const cartState = useSelector((state) => state.order.orderCart);
+
+  console.log(cartState);
+
   return (
     <>
       <Meta title={"CheckOut"} />
@@ -16,7 +22,7 @@ const CheckOut = () => {
         <Container className="container-xxl">
           <div className="col-lg-7 pe-1">
             <div className="checkout-forms">
-              <h4>Book Store</h4>
+              <h4>12:51 sec in 11 devcorner</h4>
               <nav
                 style={{ "--bs-breadcrumb-divider": "'>'" }}
                 aria-label="breadcrumb"
