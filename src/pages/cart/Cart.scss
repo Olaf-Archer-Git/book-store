@@ -4,6 +4,11 @@
 .cart {
   background: $orange-light;
 
+  &-block {
+    display: flex;
+    gap: 10px;
+  }
+
   &-container {
     display: flex;
     align-items: center;
@@ -72,7 +77,6 @@
 
 .cart-aside {
   background: $blue-light;
-  height: 100%;
   margin: 10px 0;
   padding: 10px 20px;
   border-radius: 5px;
@@ -112,4 +116,10 @@
 .aside-btn:hover {
   color: $green-light;
   background: $green;
+}
+
+@media (max-width: 991px) {
+  .cart-block {
+    display: block;
+  }
 }

@@ -42,62 +42,65 @@ const Cart = () => {
       <BreadCrumbs title={"Product Cart"} />
       <section className="cart">
         <Container className="container-xxl">
-          {orderCartState &&
-            orderCartState.map((item) => {
-              return (
-                <div className="col-lg-7" key={item._id}>
-                  <div className="cart-container">
-                    <div className="cart-img">
-                      <img src={item?.productID?.images[0]?.url} alt="#!" />
-                    </div>
-                    <div className="cart-content">
-                      <h4 className="cart-title">{item?.productID?.title}</h4>
-                      <h4 className="cart-title">{item?.productID?.author}</h4>
-                      <TfiTrash
-                        className="cart-icon"
-                        title="REMOVE"
-                        onClick={() => deleteCartProduct(item?._id)}
-                      />
-                      <div className="cart-box">
-                        <p>
-                          Price: <span>{item?.price}</span>
-                        </p>
-                        <p>
-                          Quantity: <span>{item?.quantity}</span>
-                        </p>
+          <div className="cart-block">
+            <div className="col-lg-7">
+              {orderCartState &&
+                orderCartState.map((item) => {
+                  return (
+                    <div className="cart-container" key={item._id}>
+                      <div className="cart-img">
+                        <img src={item?.productID?.images[0]?.url} alt="#!" />
+                      </div>
+                      <div className="cart-content">
+                        <h4 className="cart-title">{item?.productID?.title}</h4>
+                        <h4 className="cart-title">
+                          {item?.productID?.author}
+                        </h4>
+                        <TfiTrash
+                          className="cart-icon"
+                          title="REMOVE"
+                          onClick={() => deleteCartProduct(item?._id)}
+                        />
+                        <div className="cart-box">
+                          <p>
+                            Price: <span>{item?.price}</span>
+                          </p>
+                          <p>
+                            Quantity: <span>{item?.quantity}</span>
+                          </p>
 
-                        <p>
-                          Total:<span>{item?.price * item?.quantity}</span>
-                        </p>
+                          <p>
+                            Total:<span>{item?.price * item?.quantity}</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              );
-            })}
-
-          <div className="col-lg-5 ">
-            <aside className="cart-aside">
-              <h4>
-                Subtotal:<span>$100</span>
-              </h4>
-              <h4>
-                Taxes:<span>$100</span>
-              </h4>
-              {totalPrice !== 0 && (
+                  );
+                })}
+            </div>
+            <div className="col-lg-5 ">
+              <aside className="cart-aside">
                 <h4>
-                  Total:<span>${totalPrice}</span>
+                  Subtotal:<span>$100</span>
                 </h4>
-              )}
+                <h4>
+                  Taxes:<span>$100</span>
+                </h4>
+                {totalPrice !== 0 && (
+                  <h4>
+                    Total:<span>${totalPrice}</span>
+                  </h4>
+                )}
 
-              <p>Taxes and shipping calculated at checkout</p>
-              <Link to="/checkout" className="aside-btn">
-                Check Out
-              </Link>
-              <Link to="/shop" className="aside-btn">
-                Continue Shopping
-              </Link>
-            </aside>
+                <p>Taxes and shipping calculated at checkout</p>
+                <Link to="/checkout" className="aside-btn">
+                  Check Out
+                </Link>
+                <Link to="/shop" className="aside-btn">
+                  Continue Shopping
+                </Link>
+              </aside>
+            </div>
           </div>
         </Container>
       </section>
