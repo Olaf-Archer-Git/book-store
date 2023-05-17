@@ -6,13 +6,39 @@ import { AiOutlineDoubleLeft } from "react-icons/ai";
 import CheckOutOrder from "./CheckOutOrder";
 import Container from "../../components/container/Container";
 import { useDispatch, useSelector } from "react-redux";
+import { useFormik } from "formik";
+import * as yup from "yup";
 import "./CheckOut.scss";
 
 const CheckOut = () => {
   const dispatch = useDispatch();
   const cartState = useSelector((state) => state.order.orderCart);
 
-  console.log(cartState);
+  // console.log(cartState);
+  let checkOutSchema = yup.object({
+    firstName: yup.string().required("First Name Is Required"),
+    lastName: yup.string().required("Last Name Is Required"),
+    country: yup.string().required("Country Is Required"),
+    city: yup.string().required("City Is Required"),
+    address: yup.string().required("Address Is Required"),
+    zipCode: yup.number().required("This Field Is Required"),
+  });
+
+  const formik = useFormik({
+    initialValues: {
+      firstName: "",
+      lastName: "",
+      country: "",
+      city: "",
+      address: "",
+      zipCode: undefined,
+    },
+    validationSchema: checkOutSchema,
+    onSubmit: (values) => {
+      alert(JSON.stringify(values));
+      // dispatch(createQuery(values));
+    },
+  });
 
   return (
     <>
@@ -22,7 +48,7 @@ const CheckOut = () => {
         <Container className="container-xxl">
           <div className="col-lg-7 pe-1">
             <div className="checkout-forms">
-              <h4>12:51 sec in 11 devcorner</h4>
+              <h4>Book Store 35 56</h4>
               <nav
                 style={{ "--bs-breadcrumb-divider": "'>'" }}
                 aria-label="breadcrumb"
@@ -38,7 +64,7 @@ const CheckOut = () => {
                       Shopping
                     </Link>
                   </li>
-                  <li className="breadcrumb-item">payment</li>
+                  <li className="breadcrumb-item">Payment</li>
                 </ol>
               </nav>
 
@@ -46,66 +72,85 @@ const CheckOut = () => {
                 <h5>Contact Information</h5>
                 <div className="checkout-details">demo@email.com</div>
 
-                <div className="checkout-box">
-                  <h5>Delivery Address</h5>
+                <h5 className="my-4">Delivery Details</h5>
 
-                  <div className="checkout-select">
-                    <div>
-                      <select name="" className="form-control form-select">
-                        <option
-                          disabled
-                          value="new address"
-                          placeholder="New Address"
-                        >
-                          Use A New Address
-                        </option>
-                      </select>
-                    </div>
+                <form className="checkout-box" onSubmit={formik.handleSubmit}>
+                  <div className="checkout-input">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder={
+                        formik.errors.firstName
+                          ? formik.errors.firstName
+                          : "First Name"
+                      }
+                      name="firstName"
+                      value={formik.values.firstName}
+                      onChange={formik.handleChange("firstName")}
+                    />
+
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder={
+                        formik.errors.lastName
+                          ? formik.errors.lastName
+                          : "Last Name"
+                      }
+                      name="lastName"
+                      value={formik.values.lastName}
+                      onChange={formik.handleChange("lastName")}
+                    />
                   </div>
-                  <div>
-                    <select name="" className="form-control form-select">
-                      <option disabled value="country">
-                        Country
-                      </option>
-                    </select>
+                  <div className="checkout-input">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder={
+                        formik.errors.country
+                          ? formik.errors.country
+                          : "Country"
+                      }
+                      name="country"
+                      value={formik.values.country}
+                      onChange={formik.handleChange("country")}
+                    />
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder={
+                        formik.errors.city ? formik.errors.city : "City"
+                      }
+                      name="city"
+                      value={formik.values.city}
+                      onChange={formik.handleChange("city")}
+                    />
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder={
+                        formik.errors.zipCode
+                          ? formik.errors.zipCode
+                          : "Zip Code"
+                      }
+                      name="zipCode"
+                      value={formik.values.zipCode}
+                      onChange={formik.handleChange("zipCode")}
+                    />
                   </div>
 
                   <div className="checkout-input">
                     <input
                       type="text"
                       className="form-control"
-                      placeholder="First Name"
-                    />
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Last Name"
-                    />
-                  </div>
-
-                  <div>
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Address"
-                    />
-                  </div>
-
-                  <div className="checkout-input">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="City"
-                    />
-                    <select name="" className="form-control form-select">
-                      <option value="state" disabled>
-                        State
-                      </option>
-                    </select>
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="ZIP Code"
+                      placeholder={
+                        formik.errors.address
+                          ? formik.errors.address
+                          : "Address"
+                      }
+                      name="address"
+                      value={formik.values.address}
+                      onChange={formik.handleChange("address")}
                     />
                   </div>
 
@@ -113,16 +158,16 @@ const CheckOut = () => {
                     <Link to="/cart" className="checkout-link">
                       <AiOutlineDoubleLeft /> <span>Go Back</span>
                     </Link>
-                    <Link to="/cart" className="checkout-button">
-                      Continue Shopping
-                    </Link>
+                    <button className="checkout-button" type="submit">
+                      Place Order
+                    </button>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>
 
-          <CheckOutOrder />
+          <CheckOutOrder state={cartState} />
         </Container>
       </section>
     </>
